@@ -297,7 +297,7 @@ export default function PhotographyWebsite() {
             <div style={{ backgroundColor: '#F9F7F4', padding: '2rem', borderRadius: '12px', textAlign: 'center', marginBottom: '2rem' }}>
               <p style={{ marginBottom: '1rem', fontWeight: 'normal' }}>📅 Interactive Calendar</p>
               <p style={{ color: '#666', marginBottom: '1.5rem', fontSize: '0.95rem' }}>Replace the URL below with your Calendly link:</p>
-              <p style={{ fontSize: '0.85rem', color: '#A88E7F', marginBottom: '1rem', fontStyle: 'italic' }}>https://calendly.com/YOUR_USERNAME/30min</p>
+              <p style={{ fontSize: '0.85rem', color: '#A88E7F', marginBottom: '1rem', fontStyle: 'italic' }}>https://calendly.com/mosstimberco/30min</p>
               <button onClick={() => alert('In production, this would open your live Calendly calendar. Replace the URL above with your actual Calendly booking link.')} style={{ backgroundColor: '#A88E7F', color: 'white', border: 'none', padding: '0.8rem 1.5rem', fontSize: '0.95rem', cursor: 'pointer', borderRadius: '8px', fontFamily: 'inherit' }}>Open Calendly Calendar</button>
             </div>
 
