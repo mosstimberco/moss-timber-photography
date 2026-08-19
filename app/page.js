@@ -279,7 +279,14 @@ export default function PhotographyWebsite() {
               <input type="text" placeholder="Your name" value={emailSignup.name} onChange={(e) => setEmailSignup({...emailSignup, name: e.target.value})} style={{ padding: '0.8rem 1rem', borderRadius: '8px', border: '1px solid #D4C5B9', fontSize: '1rem', fontFamily: 'inherit', backgroundColor: '#F9F7F4' }} />
               <input type="email" placeholder="you@email.com" value={emailSignup.email} onChange={(e) => setEmailSignup({...emailSignup, email: e.target.value})} style={{ padding: '0.8rem 1rem', borderRadius: '8px', border: '1px solid #D4C5B9', fontSize: '1rem', fontFamily: 'inherit', backgroundColor: '#F9F7F4' }} />
               <input type="text" placeholder="Your city" value={emailSignup.city} onChange={(e) => setEmailSignup({...emailSignup, city: e.target.value})} style={{ padding: '0.8rem 1rem', borderRadius: '8px', border: '1px solid #D4C5B9', fontSize: '1rem', fontFamily: 'inherit', backgroundColor: '#F9F7F4' }} />
-              <button style={{ backgroundColor: '#A88E7F', color: 'white', border: 'none', padding: '0.8rem', fontSize: '1rem', cursor: 'pointer', borderRadius: '8px', fontFamily: 'inherit', fontWeight: 'normal' }}>Join the list</button>
+             <button onClick={() => {
+  if (emailSignup.name && emailSignup.email && emailSignup.city) {
+    alert(`Thanks ${emailSignup.name}! We've added you to the waitlist for ${emailSignup.city}. We'll be in touch!`);
+    setEmailSignup({ name: '', email: '', city: '' });
+  } else {
+    alert('Please fill in all fields');
+  }
+}} style={{ backgroundColor: '#A88E7F', color: 'white', border: 'none', padding: '0.8rem', fontSize: '1rem', cursor: 'pointer', borderRadius: '8px', fontFamily: 'inherit', fontWeight: 'normal' }}>Join the list</button>
             </div>
           </section>
 
