@@ -143,6 +143,30 @@ export default function PhotographyWebsite() {
   </div>
 </section>
 
+  {/* How It Works */}
+          <section style={{ padding: '4rem 2rem', backgroundColor: '#556B5F', color: 'white' }}>
+            <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+              <p style={{ fontSize: '0.85rem', letterSpacing: '2px', color: '#C4B5A8', marginBottom: '1rem' }}>HOW IT WORKS</p>
+              <h2 style={{ fontSize: '2.5rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>Three easy steps from "let's do it" to "wow, look at us."</h2>
+              <p style={{ color: '#D4C5B9', marginBottom: '3rem', fontSize: '1.05rem' }}>No quotes, no contracts, no pressure — just a simple flow built around how families actually book photos.</p>
+              
+              <div style={{ display: 'grid', gap: '2rem' }}>
+                {processSteps.map((step, idx) => (
+                  <div key={step.number} style={{ backgroundColor: 'rgba(255, 255, 255, 0.08)', padding: '2rem', borderRadius: '12px', borderLeft: '3px solid #A88E7F' }}>
+                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '2rem' }}>
+                      <div style={{ fontSize: '2.5rem', minWidth: '60px' }}>{step.icon}</div>
+                      <div>
+                        <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>{step.title}</h3>
+                        <p style={{ fontSize: '1rem', lineHeight: 1.6, color: '#D4C5B9' }}>{step.desc}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+
           {/* Packages */}
           <section id="packages" style={{ padding: '4rem 2rem', maxWidth: '1000px', margin: '0 auto' }}>
             <p style={{ fontSize: '0.85rem', letterSpacing: '2px', color: '#A88E7F', marginBottom: '1rem' }}>PHOTO PACKAGES</p>
@@ -204,32 +228,24 @@ export default function PhotographyWebsite() {
   </div>
 </section>
 
-          {/* How It Works */}
-          <section style={{ padding: '4rem 2rem', backgroundColor: '#556B5F', color: 'white' }}>
-            <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-              <p style={{ fontSize: '0.85rem', letterSpacing: '2px', color: '#C4B5A8', marginBottom: '1rem' }}>HOW IT WORKS</p>
-              <h2 style={{ fontSize: '2.5rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>Three easy steps from "let's do it" to "wow, look at us."</h2>
-              <p style={{ color: '#D4C5B9', marginBottom: '3rem', fontSize: '1.05rem' }}>No quotes, no contracts, no pressure — just a simple flow built around how families actually book photos.</p>
-              
-              <div style={{ display: 'grid', gap: '2rem' }}>
-                {processSteps.map((step, idx) => (
-                  <div key={step.number} style={{ backgroundColor: 'rgba(255, 255, 255, 0.08)', padding: '2rem', borderRadius: '12px', borderLeft: '3px solid #A88E7F' }}>
-                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '2rem' }}>
-                      <div style={{ fontSize: '2.5rem', minWidth: '60px' }}>{step.icon}</div>
-                      <div>
-                        <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>{step.title}</h3>
-                        <p style={{ fontSize: '1rem', lineHeight: 1.6, color: '#D4C5B9' }}>{step.desc}</p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
+        
+         
+
+          
+
+          {/* Urgency */}
+          <section style={{ backgroundImage: 'linear-gradient(rgba(85, 107, 95, 0.6), rgba(85, 107, 95, 0.6)), url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 400%22%3E%3Crect fill=%22%23556B5F%22 width=%221200%22 height=%22400%22/%3E%3C/svg%3E")', backgroundSize: 'cover', backgroundPosition: 'center', color: 'white', padding: '4rem 2rem', textAlign: 'center' }}>
+            <div style={{ maxWidth: '700px', margin: '0 auto' }}>
+              <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.15)', padding: '0.8rem 1.5rem', borderRadius: '30px', display: 'inline-block', marginBottom: '2rem', fontSize: '0.85rem', letterSpacing: '1px' }}>
+                ⚪ LIMITED SUMMER SLOTS
               </div>
+              <h2 style={{ fontSize: '2.8rem', marginBottom: '1rem', fontWeight: 'normal' }}>One day. Thirty minutes. A gallery your family will hold onto for years.</h2>
+              <p style={{ fontSize: '1.1rem', marginBottom: '2rem', opacity: 0.95 }}>Summer weekends in Langley/Surrey book up fast — lock in your spot now while time slots are still open.</p>
+              <button onClick={() => setCurrentPage('booking')} style={{ backgroundColor: '#A88E7F', color: 'white', border: 'none', padding: '1rem 2.5rem', fontSize: '1.05rem', cursor: 'pointer', borderRadius: '50px', fontFamily: 'inherit' }}>Reserve my Photoshoot</button>
             </div>
           </section>
 
-         
-
-          {/* FAQ */}
+{/* FAQ */}
           <section style={{ padding: '4rem 2rem', backgroundColor: '#F9F7F4' }}>
             <div style={{ maxWidth: '800px', margin: '0 auto' }}>
               <p style={{ fontSize: '0.85rem', letterSpacing: '2px', color: '#A88E7F', marginBottom: '1rem' }}>FREQUENTLY ASKED</p>
@@ -250,18 +266,6 @@ export default function PhotographyWebsite() {
                   </div>
                 ))}
               </div>
-            </div>
-          </section>
-
-          {/* Urgency */}
-          <section style={{ backgroundImage: 'linear-gradient(rgba(85, 107, 95, 0.6), rgba(85, 107, 95, 0.6)), url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 400%22%3E%3Crect fill=%22%23556B5F%22 width=%221200%22 height=%22400%22/%3E%3C/svg%3E")', backgroundSize: 'cover', backgroundPosition: 'center', color: 'white', padding: '4rem 2rem', textAlign: 'center' }}>
-            <div style={{ maxWidth: '700px', margin: '0 auto' }}>
-              <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.15)', padding: '0.8rem 1.5rem', borderRadius: '30px', display: 'inline-block', marginBottom: '2rem', fontSize: '0.85rem', letterSpacing: '1px' }}>
-                ⚪ LIMITED SUMMER SLOTS
-              </div>
-              <h2 style={{ fontSize: '2.8rem', marginBottom: '1rem', fontWeight: 'normal' }}>One day. Thirty minutes. A gallery your family will hold onto for years.</h2>
-              <p style={{ fontSize: '1.1rem', marginBottom: '2rem', opacity: 0.95 }}>Summer weekends in Langley/Surrey book up fast — lock in your spot now while time slots are still open.</p>
-              <button onClick={() => setCurrentPage('booking')} style={{ backgroundColor: '#A88E7F', color: 'white', border: 'none', padding: '1rem 2.5rem', fontSize: '1.05rem', cursor: 'pointer', borderRadius: '50px', fontFamily: 'inherit' }}>Reserve my Photoshoot</button>
             </div>
           </section>
 
