@@ -150,30 +150,29 @@ export default function PhotographyWebsite() {
           </section>
 
           {/* Gallery */}
-          <section style={{ padding: '4rem 2rem', backgroundColor: '#F9F7F4' }}>
-            <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-              <p style={{ fontSize: '0.85rem', letterSpacing: '2px', color: '#A88E7F', marginBottom: '1rem' }}>A GLIMPSE OF THE STYLE</p>
-              <h2 style={{ fontSize: '2.5rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>Warm, candid, unmistakably outdoors.</h2>
-              <p style={{ color: '#666', marginBottom: '3rem', fontSize: '1.05rem' }}>A peek at the natural-light, story-first style you can expect from your session.</p>
-              
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem' }}>
-                {[...Array(12)].map((_, idx) => (
-                  <div key={idx} style={{ 
-                    backgroundColor: '#D4C5B9', 
-                    borderRadius: '12px', 
-                    aspectRatio: '4/5', 
-                    backgroundImage: `linear-gradient(135deg, #C4B5A8 0%, #E8DDD3 100%)`,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontSize: '3rem'
-                  }}>
-                    👨‍👩‍👧‍👦
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
+<section style={{ padding: '4rem 2rem', backgroundColor: '#F9F7F4' }}>
+  <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+    <p style={{ fontSize: '0.85rem', letterSpacing: '2px', color: '#A88E7F', marginBottom: '1rem' }}>A GLIMPSE OF THE STYLE</p>
+    <h2 style={{ fontSize: '2.5rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>Warm, candid, unmistakably outdoors.</h2>
+    <p style={{ color: '#666', marginBottom: '3rem', fontSize: '1.05rem' }}>A peek at the natural-light, story-first style you can expect from your session.</p>
+    
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem' }}>
+      {[...Array(12)].map((_, idx) => (
+        <img 
+          key={idx}
+          src={`/photos/photo${idx + 1}.jpg`}
+          alt={`Family photo ${idx + 1}`}
+          style={{ 
+            borderRadius: '12px', 
+            width: '100%',
+            aspectRatio: '4/5',
+            objectFit: 'cover'
+          }}
+        />
+      ))}
+    </div>
+  </div>
+</section>
 
           {/* How It Works */}
           <section style={{ padding: '4rem 2rem', backgroundColor: '#556B5F', color: 'white' }}>
