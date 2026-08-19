@@ -300,12 +300,13 @@ export default function PhotographyWebsite() {
             <h2 style={{ fontSize: '2rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>Pick your time</h2>
             <p style={{ color: '#666', marginBottom: '2rem' }}>Reserve your session — it's free. Click below to open our Calendly calendar.</p>
             
-            <div style={{ backgroundColor: '#F9F7F4', padding: '2rem', borderRadius: '12px', textAlign: 'center', marginBottom: '2rem' }}>
-              <p style={{ marginBottom: '1rem', fontWeight: 'normal' }}>📅 Interactive Calendar</p>
-              <p style={{ color: '#666', marginBottom: '1.5rem', fontSize: '0.95rem' }}>Replace the URL below with your Calendly link:</p>
-              <p style={{ fontSize: '0.85rem', color: '#A88E7F', marginBottom: '1rem', fontStyle: 'italic' }}>https://calendly.com/mosstimberco/30min</p>
-              <button onClick={() => alert('In production, this would open your live Calendly calendar. Replace the URL above with your actual Calendly booking link.')} style={{ backgroundColor: '#A88E7F', color: 'white', border: 'none', padding: '0.8rem 1.5rem', fontSize: '0.95rem', cursor: 'pointer', borderRadius: '8px', fontFamily: 'inherit' }}>Open Calendly Calendar</button>
-            </div>
+            <iframe 
+  src="https://calendly.com/mosstimberco/30min?hide_event_type_details=1&hide_gdpr_banner=1"
+  width="100%" 
+  height="700" 
+  frameBorder="0"
+  style={{ borderRadius: '12px', marginBottom: '2rem' }}
+/>
 
             <div style={{ backgroundColor: '#F9F7F4', padding: '1.5rem', borderRadius: '12px', marginBottom: '2rem', borderLeft: '3px solid #A88E7F' }}>
               <p style={{ fontSize: '0.9rem', color: '#666' }}>✓ After selecting a time on Calendly, complete your details below:</p>
