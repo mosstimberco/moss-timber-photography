@@ -113,6 +113,36 @@ export default function PhotographyWebsite() {
             </div>
           </section>
 
+{/* Details */}
+<section style={{ padding: '4rem 2rem', maxWidth: '1000px', margin: '0 auto' }}>
+  <p style={{ fontSize: '0.85rem', letterSpacing: '2px', color: '#A88E7F', marginBottom: '1rem' }}>THE DETAILS</p>
+  <h2 style={{ fontSize: '2.5rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>Everything you need to know, at a glance.</h2>
+  <p style={{ color: '#666', marginBottom: '3rem', fontSize: '1.05rem' }}>Designed for busy families who want beautiful photos without the all-day shoot or the all-in-one price tag.</p>
+  
+  <div style={{ display: 'grid', gap: '1.5rem', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))' }}>
+    <div style={{ backgroundColor: '#F9F7F4', padding: '2rem', borderRadius: '12px' }}>
+      <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>⏱️</div>
+      <h3 style={{ fontSize: '1.3rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>30 minutes</h3>
+      <p style={{ color: '#666', fontSize: '0.95rem', lineHeight: '1.6' }}>Quick enough for toddlers, long enough for a real gallery of moments.</p>
+    </div>
+    <div style={{ backgroundColor: '#F9F7F4', padding: '2rem', borderRadius: '12px' }}>
+      <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>📅</div>
+      <h3 style={{ fontSize: '1.3rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>Summer 2026</h3>
+      <p style={{ color: '#666', fontSize: '0.95rem', lineHeight: '1.6' }}>Saturday and Sunday afternoon time slots, scheduled around golden hour.</p>
+    </div>
+    <div style={{ backgroundColor: '#F9F7F4', padding: '2rem', borderRadius: '12px' }}>
+      <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>📍</div>
+      <h3 style={{ fontSize: '1.3rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>Surrey BC</h3>
+      <p style={{ color: '#666', fontSize: '0.95rem', lineHeight: '1.6' }}>A lush, beautiful local area — exact location shared once you book.</p>
+    </div>
+    <div style={{ backgroundColor: '#F9F7F4', padding: '2rem', borderRadius: '12px' }}>
+      <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>💰</div>
+      <h3 style={{ fontSize: '1.3rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>$0 to reserve</h3>
+      <p style={{ color: '#666', fontSize: '0.95rem', lineHeight: '1.6' }}>No session fee. No deposit. Choose a photo package only after the shoot.</p>
+    </div>
+  </div>
+</section>
+
           {/* Packages */}
           <section id="packages" style={{ padding: '4rem 2rem', maxWidth: '1000px', margin: '0 auto' }}>
             <p style={{ fontSize: '0.85rem', letterSpacing: '2px', color: '#A88E7F', marginBottom: '1rem' }}>PHOTO PACKAGES</p>
@@ -197,35 +227,7 @@ export default function PhotographyWebsite() {
             </div>
           </section>
 
-         {/* Details */}
-<section style={{ padding: '4rem 2rem', maxWidth: '1000px', margin: '0 auto' }}>
-  <p style={{ fontSize: '0.85rem', letterSpacing: '2px', color: '#A88E7F', marginBottom: '1rem' }}>THE DETAILS</p>
-  <h2 style={{ fontSize: '2.5rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>Everything you need to know, at a glance.</h2>
-  <p style={{ color: '#666', marginBottom: '3rem', fontSize: '1.05rem' }}>Designed for busy families who want beautiful photos without the all-day shoot or the all-in-one price tag.</p>
-  
-  <div style={{ display: 'grid', gap: '1.5rem', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))' }}>
-    <div style={{ backgroundColor: '#F9F7F4', padding: '2rem', borderRadius: '12px' }}>
-      <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>⏱️</div>
-      <h3 style={{ fontSize: '1.3rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>30 minutes</h3>
-      <p style={{ color: '#666', fontSize: '0.95rem', lineHeight: '1.6' }}>Quick enough for toddlers, long enough for a real gallery of moments.</p>
-    </div>
-    <div style={{ backgroundColor: '#F9F7F4', padding: '2rem', borderRadius: '12px' }}>
-      <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>📅</div>
-      <h3 style={{ fontSize: '1.3rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>Summer 2026</h3>
-      <p style={{ color: '#666', fontSize: '0.95rem', lineHeight: '1.6' }}>Saturday and Sunday afternoon time slots, scheduled around golden hour.</p>
-    </div>
-    <div style={{ backgroundColor: '#F9F7F4', padding: '2rem', borderRadius: '12px' }}>
-      <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>📍</div>
-      <h3 style={{ fontSize: '1.3rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>Surrey BC</h3>
-      <p style={{ color: '#666', fontSize: '0.95rem', lineHeight: '1.6' }}>A lush, beautiful local area — exact location shared once you book.</p>
-    </div>
-    <div style={{ backgroundColor: '#F9F7F4', padding: '2rem', borderRadius: '12px' }}>
-      <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>💰</div>
-      <h3 style={{ fontSize: '1.3rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>$0 to reserve</h3>
-      <p style={{ color: '#666', fontSize: '0.95rem', lineHeight: '1.6' }}>No session fee. No deposit. Choose a photo package only after the shoot.</p>
-    </div>
-  </div>
-</section>
+         
 
           {/* FAQ */}
           <section style={{ padding: '4rem 2rem', backgroundColor: '#F9F7F4' }}>
