@@ -206,9 +206,9 @@ export default function PhotographyWebsite() {
           {/* Gallery */}
 <section style={{ padding: '4rem 2rem', backgroundColor: '#F9F7F4' }}>
   <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-    <p style={{ fontSize: '0.85rem', letterSpacing: '2px', color: '#A88E7F', marginBottom: '1rem' }}>A GLIMPSE OF THE STYLE</p>
-    <h2 style={{ fontSize: '2.5rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>Warm, candid, unmistakably outdoors.</h2>
-    <p style={{ color: '#666', marginBottom: '3rem', fontSize: '1.05rem' }}>A peek at the natural-light, story-first style you can expect from your session.</p>
+    <p style={{ fontSize: '0.85rem', letterSpacing: '2px', color: '#A88E7F', marginBottom: '1rem' }}>OUR STORY</p>
+<h2 style={{ fontSize: '2.5rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>Authentic moments in natural light.</h2>
+<p style={{ color: '#666', marginBottom: '3rem', fontSize: '1.05rem' }}>Real families, real smiles, real memories captured in the beauty of the outdoors.</p>
     
     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem' }}>
       {[...Array(12)].map((_, idx) => (
