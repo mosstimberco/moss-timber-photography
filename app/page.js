@@ -316,35 +316,7 @@ export default function PhotographyWebsite() {
 />
 
             <div style={{ backgroundColor: '#F9F7F4', padding: '1.5rem', borderRadius: '12px', marginBottom: '2rem', borderLeft: '3px solid #A88E7F' }}>
-              <p style={{ fontSize: '0.9rem', color: '#666' }}>✓ After selecting a time on Calendly, complete your details below:</p>
-            </div>
-
-            <div style={{ display: 'grid', gap: '1rem', marginBottom: '2rem' }}>
-              <div>
-                <label style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.9rem', letterSpacing: '1px', color: '#A88E7F', fontWeight: 'normal' }}>NAME</label>
-                <input type="text" name="name" placeholder="Your name" value={clientInfo.name} onChange={handleClientInfoChange} style={{ width: '100%', padding: '0.8rem 1rem', borderRadius: '8px', border: '1px solid #D4C5B9', fontSize: '1rem', fontFamily: 'inherit', backgroundColor: '#F9F7F4', boxSizing: 'border-box' }} />
-              </div>
-              <div>
-                <label style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.9rem', letterSpacing: '1px', color: '#A88E7F', fontWeight: 'normal' }}>EMAIL</label>
-                <input type="email" name="email" placeholder="you@email.com" value={clientInfo.email} onChange={handleClientInfoChange} style={{ width: '100%', padding: '0.8rem 1rem', borderRadius: '8px', border: '1px solid #D4C5B9', fontSize: '1rem', fontFamily: 'inherit', backgroundColor: '#F9F7F4', boxSizing: 'border-box' }} />
-              </div>
-              <div>
-                <label style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.9rem', letterSpacing: '1px', color: '#A88E7F', fontWeight: 'normal' }}>TYPE OF PHOTOSHOOT</label>
-                <input type="text" name="message" placeholder="Family, maternity, newborn..." value={clientInfo.message} onChange={handleClientInfoChange} style={{ width: '100%', padding: '0.8rem 1rem', borderRadius: '8px', border: '1px solid #D4C5B9', fontSize: '1rem', fontFamily: 'inherit', backgroundColor: '#F9F7F4', boxSizing: 'border-box' }} />
-              </div>
-              <div>
-                <label style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.9rem', letterSpacing: '1px', color: '#A88E7F', fontWeight: 'normal' }}>ANY SPECIAL NOTES?</label>
-                <textarea placeholder="Tell us a little about what you're looking for..." value={clientInfo.city} onChange={(e) => setClientInfo({...clientInfo, city: e.target.value})} style={{ width: '100%', padding: '0.8rem 1rem', borderRadius: '8px', border: '1px solid #D4C5B9', fontSize: '1rem', fontFamily: 'inherit', backgroundColor: '#F9F7F4', boxSizing: 'border-box', minHeight: '80px' }} />
-              </div>
-            </div>
-
-            <div style={{ display: 'flex', gap: '1rem' }}>
-              <button onClick={() => setCurrentPage('home')} style={{ backgroundColor: 'white', color: '#2C3E2F', border: '1px solid #D4C5B9', padding: '1rem 1.5rem', fontSize: '1rem', cursor: 'pointer', borderRadius: '8px', fontFamily: 'inherit', flex: 1 }}>Back</button>
-              <button onClick={() => handleBooking('confirm')} style={{ backgroundColor: '#A88E7F', color: 'white', border: 'none', padding: '1rem 1.5rem', fontSize: '1rem', cursor: 'pointer', borderRadius: '8px', fontFamily: 'inherit', flex: 1 }}>Confirm Booking</button>
-            </div>
-          </div>
-        </section>
-      )}
+              
     </div>
   );
 }
