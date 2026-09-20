@@ -91,7 +91,7 @@ export default function PhotographyWebsite() {
   };
 
   return (
-    <div style={{ fontFamily: "'Georgia', serif", backgroundColor: '#F5F1E8', color: '#2C3E2F', minHeight: '100vh' }}>
+ <div style={{ fontFamily: "'Montserrat', sans-serif", backgroundColor: '#F5F1E8', color: '#2C3E2F', minHeight: '100vh' }}>
       
       {/* Navigation */}
       <nav style={{ backgroundColor: '#F5F1E8', padding: '1.5rem', textAlign: 'center', borderBottom: '1px solid #D4C5B9' }}>
