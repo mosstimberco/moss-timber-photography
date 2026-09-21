@@ -90,8 +90,30 @@ export default function PhotographyWebsite() {
     setClientInfo(prev => ({ ...prev, [name]: value }));
   };
 
-  return (
- <div style={{ fontFamily: "'Montserrat', sans-serif", backgroundColor: '#F5F1E8', color: '#2C3E2F', minHeight: '100vh' }}>
+ return (
+  <>
+    <script type="application/ld+json">
+      {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Moss & Timber Photography",
+        "description": "Family and lifestyle photography mini sessions",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Langley",
+          "addressRegion": "BC",
+          "addressCountry": "CA"
+        },
+        "url": "https://mosstimberco.com",
+        "image": "https://mosstimberco.com/photos/photo1.jpg",
+        "sameAs": ["https://www.instagram.com/mossandtimber"],
+        "serviceArea": {
+          "@type": "City",
+          "name": "Langley, Surrey, BC"
+        }
+      })}
+    </script>
+    <div style={{ fontFamily: "'Montserrat', sans-serif", backgroundColor: '#F5F1E8', color: '#2C3E2F', minHeight: '100vh' }}>
       
       {/* Navigation */}
       <nav style={{ backgroundColor: '#F5F1E8', padding: '1.5rem', textAlign: 'center', borderBottom: '1px solid #D4C5B9' }}>
@@ -211,11 +233,11 @@ export default function PhotographyWebsite() {
 <p style={{ color: '#666', marginBottom: '3rem', fontSize: '1.05rem' }}>Real families, real smiles, real memories captured in the beauty of the outdoors.</p>
     
     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem' }}>
-      {[...Array(12)].map((_, idx) => (
-        <img 
-          key={idx}
-          src={`/photos/photo${idx + 1}.jpg`}
-          alt={`Family photo ${idx + 1}`}
+     {[...Array(12)].map((_, idx) => (
+  <img 
+    key={idx}
+    src={`/photos/photo${idx + 1}.jpg`}
+    alt={`Beautiful family portrait photography session by Moss & Timber Photography - Langley Surrey BC`}
           style={{ 
             borderRadius: '12px', 
             width: '100%',
@@ -318,5 +340,6 @@ export default function PhotographyWebsite() {
             <div style={{ backgroundColor: '#F9F7F4', padding: '1.5rem', borderRadius: '12px', marginBottom: '2rem', borderLeft: '3px solid #A88E7F' }}>
               
     </div>
-  );
+  </>
+);
 }
