@@ -54,7 +54,7 @@ export default function PhotographyWebsite() {
     { q: 'When will we get our photos?', a: 'Your preview gallery lands within 7 days of the shoot. The moment you pick a collection, your high-resolution downloads are ready.' },
     { q: 'How does payment actually work?', a: 'There isn’t one — not upfront, anyway. You reserve for free, we shoot, you preview the gallery, and only then do you choose a collection. Love them, pay. Don’t, walk away. That’s the whole deal.' },
     { q: 'Where do the sessions happen?', a: 'Out in the open, under real trees. In Surrey we love Bear Creek Park and Hawthorn Park; in Langley it’s Campbell Valley and Derby Reach. We’ll name your exact meeting spot when you book — no mystery, no surprises.' },
-    { q: 'Can we bring the dog? Grandma? The whole crew?', a: 'Please do. Kids can be kids, dogs can be dogs, grandparents get the good bench. Mini sessions comfortably fit up to 6–8 people — just mention the headcount when you book.' },
+    { q: 'Can we bring the dog? Grandma? The whole crew?', a: 'Please do. Kids can be kids, dogs can be dogs, grandparents get the good bench. Mini sessions comfortably fit up to 6\u20138 people — just mention the headcount when you book.' },
     { q: 'Do you shoot anything besides families?', a: 'Yes — Moss & Timber also photographs food, menus, and products for Langley & Surrey businesses. Flat-rate sets, 48-hour turnaround. Scroll to the business section below or mention it when you book.' }
   ];
 
