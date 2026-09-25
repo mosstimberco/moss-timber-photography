@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 
 export default function PhotographyWebsite() {
   const [currentPage, setCurrentPage] = useState('home');
-  const [emailSignup, setEmailSignup] = useState({ name: '', email: '', city: '' });
   const [expandedFaq, setExpandedFaq] = useState(null);
 
   const trackLead = () => {
@@ -302,25 +301,12 @@ export default function PhotographyWebsite() {
               </div>
             </section>
 
-            {/* Email Waitlist */}
-            <section style={{ padding: '4rem 2rem', maxWidth: '800px', margin: '0 auto' }}>
+            {/* Holiday minis CTA */}
+            <section style={{ padding: '4rem 2rem', maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
               <p style={{ fontSize: '0.85rem', letterSpacing: '2px', color: '#A88E7F', marginBottom: '1rem' }}>FIRST TO KNOW</p>
               <h2 style={{ fontSize: '2.2rem', marginBottom: '1rem', fontWeight: 'normal' }}>Get first dibs on new dates</h2>
-              <p style={{ color: '#666', marginBottom: '2rem', fontSize: '1rem' }}>Holiday mini dates go to the waitlist before anyone else. Join and you’ll hear first.</p>
-
-              <div style={{ display: 'grid', gap: '1rem' }}>
-                <input type="text" placeholder="Your name" value={emailSignup.name} onChange={(e) => setEmailSignup({ ...emailSignup, name: e.target.value })} style={{ padding: '0.8rem 1rem', borderRadius: '8px', border: '1px solid #D4C5B9', fontSize: '1rem', fontFamily: 'inherit', backgroundColor: '#F9F7F4' }} />
-                <input type="email" placeholder="you@email.com" value={emailSignup.email} onChange={(e) => setEmailSignup({ ...emailSignup, email: e.target.value })} style={{ padding: '0.8rem 1rem', borderRadius: '8px', border: '1px solid #D4C5B9', fontSize: '1rem', fontFamily: 'inherit', backgroundColor: '#F9F7F4' }} />
-                <input type="text" placeholder="Your city" value={emailSignup.city} onChange={(e) => setEmailSignup({ ...emailSignup, city: e.target.value })} style={{ padding: '0.8rem 1rem', borderRadius: '8px', border: '1px solid #D4C5B9', fontSize: '1rem', fontFamily: 'inherit', backgroundColor: '#F9F7F4' }} />
-                <button onClick={() => {
-                  if (emailSignup.name && emailSignup.email && emailSignup.city) {
-                    alert(`Thanks ${emailSignup.name}! You're on the list — we'll be in touch about dates near ${emailSignup.city}.`);
-                    setEmailSignup({ name: '', email: '', city: '' });
-                  } else {
-                    alert('Please fill in all fields');
-                  }
-                }} style={{ backgroundColor: '#A88E7F', color: 'white', border: 'none', padding: '0.8rem', fontSize: '1rem', cursor: 'pointer', borderRadius: '8px', fontFamily: 'inherit', fontWeight: 'normal' }}>Join the list</button>
-              </div>
+              <p style={{ color: '#666', marginBottom: '2rem', fontSize: '1rem' }}>Holiday mini dates fill fast. Booking is free — reserve your spot now and you’ll only ever pay if you love your gallery.</p>
+              <button onClick={() => { trackLead(); goBooking(); }} style={{ backgroundColor: '#A88E7F', color: 'white', border: 'none', padding: '1rem 2.5rem', fontSize: '1.05rem', cursor: 'pointer', borderRadius: '50px', fontFamily: 'inherit' }}>Reserve my session</button>
             </section>
 
             {/* Footer */}
