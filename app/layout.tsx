@@ -14,14 +14,16 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Moss & Timber Photography | Family Photo Sessions Langley Surrey BC",
-  description: "Beautiful family photo sessions in Langley & Surrey, BC. Free 30-minute outdoor sessions. Professional photography by Moss & Timber CO.",
-  keywords: "family photography Langley, family photos Surrey BC, outdoor family portraits, mini photo sessions",
+  title: "Family Photographer in Langley & Surrey, BC | Moss & Timber Photography",
+  description: "Langley & Surrey family photographer. 30-minute outdoor mini sessions — free to reserve, pay only for the photos you love. Fall & holiday dates now booking.",
+  keywords: "family photographer Langley BC, family photographer Surrey BC, fall mini sessions Langley, Christmas mini sessions Surrey, outdoor family portraits Fraser Valley",
+  alternates: { canonical: "https://mosstimberco.com" },
   openGraph: {
-    title: "Moss & Timber Photography",
-    description: "Family photo sessions in nature - Langley & Surrey BC",
+    title: "Moss & Timber Photography | Family Photographer Langley & Surrey",
+    description: "30-minute outdoor family sessions. Free to reserve — pay only for the photos you love.",
     url: "https://mosstimberco.com",
     type: "website",
+    images: [{ url: "https://mosstimberco.com/photos/hero-family.jpg", alt: "Fall family photo session in Langley BC" }],
   },
 };
 export default function RootLayout({ children }: LayoutProps<"/">) {
