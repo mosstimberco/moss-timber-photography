@@ -5,6 +5,28 @@ import React, { useState } from 'react';
 export default function PhotographyWebsite() {
   const [currentPage, setCurrentPage] = useState('home');
   const [expandedFaq, setExpandedFaq] = useState(null);
+  const [waitlist, setWaitlist] = useState({ name: '', email: '', city: 'Langley', how: 'Facebook' });
+  const [waitlistStatus, setWaitlistStatus] = useState(null);
+
+  const submitWaitlist = async (e) => {
+    e.preventDefault();
+    setWaitlistStatus('sending');
+    try {
+      const res = await fetch('https://formsubmit.co/ajax/mosstimberco@gmail.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          _subject: 'New Moss & Timber waitlist signup',
+          Name: waitlist.name,
+          Email: waitlist.email,
+          City: waitlist.city,
+          'How heard': waitlist.how
+        })
+      });
+      if (res.ok) { setWaitlistStatus('done'); trackLead(); }
+      else { setWaitlistStatus('error'); }
+    } catch (err) { setWaitlistStatus('error'); }
+  };
 
   const trackLead = () => {
     if (typeof window !== 'undefined' && window.fbq) {
@@ -54,6 +76,7 @@ export default function PhotographyWebsite() {
     { q: 'How does payment actually work?', a: 'There isn’t one — not upfront, anyway. You reserve for free, we shoot, you preview the gallery, and only then do you choose a collection. Love them, pay. Don’t, walk away. That’s the whole deal.' },
     { q: 'Where do the sessions happen?', a: 'Out in the open, under real trees. In Surrey we love Bear Creek Park and Hawthorn Park; in Langley it’s Campbell Valley and Derby Reach. We’ll name your exact meeting spot when you book — no mystery, no surprises.' },
     { q: 'Can we bring the dog? Grandma? The whole crew?', a: 'Please do. Kids can be kids, dogs can be dogs, grandparents get the good bench. Mini sessions comfortably fit up to 6\u20138 people — just mention the headcount when you book.' },
+    { q: 'Can we reschedule if something comes up?', a: 'Of course — life with kids is unpredictable. Move to any open slot at no charge, as long as you let us know at least 24 hours ahead.' },
     { q: 'Do you shoot anything besides families?', a: 'Yes — Moss & Timber also photographs food, menus, and products for Langley & Surrey businesses. Flat-rate sets, 48-hour turnaround. Scroll to the business section below or mention it when you book.' }
   ];
 
@@ -139,6 +162,7 @@ export default function PhotographyWebsite() {
                     <button onClick={goBooking} style={{ backgroundColor: '#A88E7F', color: 'white', border: 'none', padding: '1rem 2.5rem', fontSize: '1.05rem', cursor: 'pointer', borderRadius: '50px', fontFamily: 'inherit' }}>Reserve my session</button>
                     <button onClick={() => document.getElementById('packages')?.scrollIntoView({ behavior: 'smooth' })} style={{ backgroundColor: 'transparent', color: 'white', border: '1px solid white', padding: '1rem 2.5rem', fontSize: '1.05rem', cursor: 'pointer', borderRadius: '50px', fontFamily: 'inherit', marginLeft: '1rem' }}>See collections</button>
                   </div>
+                  <p style={{ marginTop: '1.25rem', fontSize: '0.9rem', opacity: 0.85 }}>No card · No deposit · Walk away free if you don’t love them</p>
                 </div>
                 <div>
                   <img src="/photos/hero-family.jpg" alt="Fall family session — couple with their young child, Moss & Timber Photography" style={{ borderRadius: '16px', width: '100%', aspectRatio: '4/5', objectFit: 'cover' }} />
@@ -283,10 +307,10 @@ export default function PhotographyWebsite() {
             <section style={{ backgroundColor: '#556B5F', color: 'white', padding: '4rem 2rem', textAlign: 'center' }}>
               <div style={{ maxWidth: '700px', margin: '0 auto' }}>
                 <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.15)', padding: '0.8rem 1.5rem', borderRadius: '30px', display: 'inline-block', marginBottom: '2rem', fontSize: '0.85rem', letterSpacing: '1px' }}>
-                  FALL &amp; HOLIDAY 2026
+                  FALL MINI SESSIONS 2026 · LIMITED WEEKEND SLOTS
                 </div>
-                <h2 style={{ fontSize: '2.8rem', marginBottom: '1rem', fontWeight: 'normal' }}>Fall dates fill fast.</h2>
-                <p style={{ fontSize: '1.1rem', marginBottom: '2rem', opacity: 0.95 }}>Fall colour peaks in October and it’s gone in a blink. Christmas minis run November through mid-December — reserve early enough that your gallery’s back in time for cards.</p>
+                <h2 style={{ fontSize: '2.8rem', marginBottom: '1rem', fontWeight: 'normal' }}>Once a year, the maples turn.</h2>
+                <p style={{ fontSize: '1.1rem', marginBottom: '2rem', opacity: 0.95 }}>Every fall we open a small number of weekend mini sessions across Langley &amp; Surrey — golden light, falling leaves, the whole thing. When the slots are gone, they’re gone until next year. Christmas minis run November through mid-December — reserve early enough that your gallery’s back in time for cards.</p>
                 <button onClick={goBooking} style={{ backgroundColor: '#A88E7F', color: 'white', border: 'none', padding: '1rem 2.5rem', fontSize: '1.05rem', cursor: 'pointer', borderRadius: '50px', fontFamily: 'inherit' }}>Reserve my session</button>
               </div>
             </section>
@@ -315,12 +339,47 @@ export default function PhotographyWebsite() {
               </div>
             </section>
 
-            {/* Holiday minis CTA */}
+            {/* Waitlist */}
             <section style={{ padding: '4rem 2rem', maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
               <p style={{ fontSize: '0.85rem', letterSpacing: '2px', color: '#A88E7F', marginBottom: '1rem' }}>FIRST TO KNOW</p>
               <h2 style={{ fontSize: '2.2rem', marginBottom: '1rem', fontWeight: 'normal' }}>Get first dibs on new dates</h2>
-              <p style={{ color: '#666', marginBottom: '2rem', fontSize: '1rem' }}>Holiday mini dates fill fast. Booking is free — reserve your spot now and you’ll only ever pay if you love your gallery.</p>
-              <button onClick={() => { trackLead(); goBooking(); }} style={{ backgroundColor: '#A88E7F', color: 'white', border: 'none', padding: '1rem 2.5rem', fontSize: '1.05rem', cursor: 'pointer', borderRadius: '50px', fontFamily: 'inherit' }}>Reserve my session</button>
+              <p style={{ color: '#666', marginBottom: '2rem', fontSize: '1rem' }}>Fall slots go to the waitlist before anyone else. Join free — no spam, just first pick of new dates in your city.</p>
+              {waitlistStatus === 'done' ? (
+                <div style={{ backgroundColor: '#F9F7F4', border: '1px solid #A88E7F', padding: '2rem', borderRadius: '12px', maxWidth: '500px', margin: '0 auto' }}>
+                  <p style={{ fontSize: '1.1rem', marginBottom: '0.5rem' }}>You’re on the list.</p>
+                  <p style={{ color: '#666', fontSize: '0.95rem' }}>We’ll email you the moment new dates open in {waitlist.city}.</p>
+                </div>
+              ) : (
+                <form onSubmit={submitWaitlist} style={{ maxWidth: '500px', margin: '0 auto', display: 'grid', gap: '1rem', textAlign: 'left' }}>
+                  <input type="text" required placeholder="Your name" value={waitlist.name} onChange={(e) => setWaitlist({ ...waitlist, name: e.target.value })}
+                    style={{ padding: '0.9rem 1.2rem', borderRadius: '12px', border: '1px solid #D4C5B9', fontSize: '1rem', fontFamily: 'inherit', backgroundColor: 'white', color: '#2C3E2F' }} />
+                  <input type="email" required placeholder="Email address" value={waitlist.email} onChange={(e) => setWaitlist({ ...waitlist, email: e.target.value })}
+                    style={{ padding: '0.9rem 1.2rem', borderRadius: '12px', border: '1px solid #D4C5B9', fontSize: '1rem', fontFamily: 'inherit', backgroundColor: 'white', color: '#2C3E2F' }} />
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                    <select value={waitlist.city} onChange={(e) => setWaitlist({ ...waitlist, city: e.target.value })}
+                      style={{ padding: '0.9rem 1.2rem', borderRadius: '12px', border: '1px solid #D4C5B9', fontSize: '1rem', fontFamily: 'inherit', backgroundColor: 'white', color: '#2C3E2F' }}>
+                      <option>Langley</option>
+                      <option>Surrey</option>
+                      <option>Elsewhere in the Lower Mainland</option>
+                    </select>
+                    <select value={waitlist.how} onChange={(e) => setWaitlist({ ...waitlist, how: e.target.value })}
+                      style={{ padding: '0.9rem 1.2rem', borderRadius: '12px', border: '1px solid #D4C5B9', fontSize: '1rem', fontFamily: 'inherit', backgroundColor: 'white', color: '#2C3E2F' }}>
+                      <option>Facebook</option>
+                      <option>Instagram</option>
+                      <option>Google</option>
+                      <option>Friend or family</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                  <button type="submit" disabled={waitlistStatus === 'sending'}
+                    style={{ backgroundColor: '#A88E7F', color: 'white', border: 'none', padding: '1rem 2.5rem', fontSize: '1.05rem', cursor: 'pointer', borderRadius: '50px', fontFamily: 'inherit', opacity: waitlistStatus === 'sending' ? 0.7 : 1 }}>
+                    {waitlistStatus === 'sending' ? 'Joining…' : 'Join the waitlist'}
+                  </button>
+                  {waitlistStatus === 'error' && (
+                    <p style={{ color: '#a33', fontSize: '0.95rem', textAlign: 'center' }}>Something went wrong — please try again, or email mosstimberco@gmail.com.</p>
+                  )}
+                </form>
+              )}
             </section>
 
             {/* Footer */}
