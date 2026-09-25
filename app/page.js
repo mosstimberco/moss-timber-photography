@@ -61,19 +61,16 @@ export default function PhotographyWebsite() {
     {
       number: 1,
       title: 'Claim your slot',
-      icon: '📅',
       desc: 'Pick a time that suits your crew from our live calendar. It’s completely free — no card, no deposit, no fine print.'
     },
     {
       number: 2,
       title: 'Wander & play',
-      icon: '🍂',
       desc: 'Meet us at the park at golden hour. No stiff poses, no “say cheese” marathons — just your family, being yourselves, while we do the work.'
     },
     {
       number: 3,
       title: 'Fall in love, then pay',
-      icon: '🖼️',
       desc: 'Within 7 days your gallery arrives. Choose the collection that fits your walls — or walk away owing nothing at all.'
     }
   ];
@@ -115,15 +112,22 @@ export default function PhotographyWebsite() {
         {currentPage === 'home' && (
           <>
             {/* Hero */}
-            <section style={{ backgroundImage: 'linear-gradient(rgba(44, 62, 47, 0.55), rgba(44, 62, 47, 0.55)), url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 600%22%3E%3Crect fill=%22%23556B5F%22 width=%221200%22 height=%22600%22/%3E%3C/svg%3E")', backgroundSize: 'cover', backgroundPosition: 'center', color: 'white', padding: '4rem 2rem', textAlign: 'center', minHeight: '62vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-              <div style={{ maxWidth: '640px' }}>
-                <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.15)', padding: '0.6rem 1.25rem', borderRadius: '30px', display: 'inline-block', marginBottom: '1.5rem', fontSize: '0.8rem', letterSpacing: '2px' }}>
-                  🍂 FALL &amp; HOLIDAY MINIS — NOW BOOKING
+            <section style={{ backgroundColor: '#2C3E2F', color: 'white', padding: '4rem 2rem' }}>
+              <div style={{ maxWidth: '1100px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', alignItems: 'center' }}>
+                <div>
+                  <div style={{ border: '1px solid rgba(255, 255, 255, 0.35)', padding: '0.6rem 1.25rem', borderRadius: '30px', display: 'inline-block', marginBottom: '1.5rem', fontSize: '0.8rem', letterSpacing: '2px' }}>
+                    FALL &amp; HOLIDAY MINIS — NOW BOOKING
+                  </div>
+                  <h1 style={{ fontSize: '3rem', marginBottom: '1rem', fontWeight: 'normal', lineHeight: 1.2 }}>Where family stories are rooted in nature.</h1>
+                  <p style={{ fontSize: '1.1rem', marginBottom: '2rem', opacity: 0.9, lineHeight: 1.6 }}>Thirty unhurried minutes under the maples of Langley &amp; Surrey. You pay nothing to reserve — and nothing at all unless you love the photos.</p>
+                  <div>
+                    <button onClick={goBooking} style={{ backgroundColor: '#A88E7F', color: 'white', border: 'none', padding: '1rem 2.5rem', fontSize: '1.05rem', cursor: 'pointer', borderRadius: '50px', fontFamily: 'inherit' }}>Reserve my session</button>
+                    <button onClick={() => document.getElementById('packages')?.scrollIntoView({ behavior: 'smooth' })} style={{ backgroundColor: 'transparent', color: 'white', border: '1px solid white', padding: '1rem 2.5rem', fontSize: '1.05rem', cursor: 'pointer', borderRadius: '50px', fontFamily: 'inherit', marginLeft: '1rem' }}>See collections</button>
+                  </div>
                 </div>
-                <h1 style={{ fontSize: '3rem', marginBottom: '1rem', fontWeight: 'normal', lineHeight: 1.2 }}>Where family stories are rooted in nature.</h1>
-                <p style={{ fontSize: '1.1rem', marginBottom: '2rem', opacity: 0.95, lineHeight: 1.6 }}>Thirty unhurried minutes under the maples of Langley &amp; Surrey. You pay nothing to reserve — and nothing at all unless you love the photos.</p>
-                <button onClick={goBooking} style={{ backgroundColor: '#A88E7F', color: 'white', border: 'none', padding: '1rem 2.5rem', fontSize: '1.05rem', cursor: 'pointer', borderRadius: '50px', fontFamily: 'inherit' }}>Reserve my session</button>
-                <button onClick={() => document.getElementById('packages')?.scrollIntoView({ behavior: 'smooth' })} style={{ backgroundColor: 'transparent', color: 'white', border: '1px solid white', padding: '1rem 2.5rem', fontSize: '1.05rem', cursor: 'pointer', borderRadius: '50px', fontFamily: 'inherit', marginLeft: '1rem' }}>See collections</button>
+                <div>
+                  <img src="/photos/photo1.jpg" alt="Family session at golden hour in the park — Moss & Timber Photography" style={{ borderRadius: '16px', width: '100%', aspectRatio: '4/5', objectFit: 'cover' }} />
+                </div>
               </div>
             </section>
 
@@ -131,26 +135,22 @@ export default function PhotographyWebsite() {
             <section style={{ padding: '4rem 2rem', maxWidth: '1000px', margin: '0 auto' }}>
               <p style={{ fontSize: '0.85rem', letterSpacing: '2px', color: '#A88E7F', marginBottom: '1rem' }}>GOOD TO KNOW</p>
               <h2 style={{ fontSize: '2.5rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>Thirty minutes, zero risk, photos you’ll actually frame.</h2>
-              <p style={{ color: '#666', marginBottom: '3rem', fontSize: '1.05rem' }}>Built for busy families who want the gallery without the production.</p>
+              <p style={{ color: '#666', marginBottom: '3rem', fontSize: '1.05rem' }}>For families who want beautiful photos without the fuss.</p>
 
               <div style={{ display: 'grid', gap: '1.5rem', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))' }}>
                 <div style={{ backgroundColor: '#F9F7F4', padding: '2rem', borderRadius: '12px' }}>
-                  <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>⏱️</div>
                   <h3 style={{ fontSize: '1.3rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>30 minutes</h3>
                   <p style={{ color: '#666', fontSize: '0.95rem', lineHeight: '1.6' }}>Short enough for wiggly toddlers, long enough for the real stuff — the laughs, the leaning-in, the in-between.</p>
                 </div>
                 <div style={{ backgroundColor: '#F9F7F4', padding: '2rem', borderRadius: '12px' }}>
-                  <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>🍂</div>
                   <h3 style={{ fontSize: '1.3rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>Fall &amp; Holiday 2026</h3>
                   <p style={{ color: '#666', fontSize: '0.95rem', lineHeight: '1.6' }}>Golden-hour sessions through October, plus Christmas minis November to mid-December — back in time for holiday cards.</p>
                 </div>
                 <div style={{ backgroundColor: '#F9F7F4', padding: '2rem', borderRadius: '12px' }}>
-                  <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>📍</div>
                   <h3 style={{ fontSize: '1.3rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>Langley &amp; Surrey</h3>
                   <p style={{ color: '#666', fontSize: '0.95rem', lineHeight: '1.6' }}>Bear Creek &amp; Hawthorn Park in Surrey, Campbell Valley &amp; Derby Reach in Langley. Real parks, named upfront.</p>
                 </div>
                 <div style={{ backgroundColor: '#F9F7F4', padding: '2rem', borderRadius: '12px' }}>
-                  <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>💰</div>
                   <h3 style={{ fontSize: '1.3rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>$0 to reserve</h3>
                   <p style={{ color: '#666', fontSize: '0.95rem', lineHeight: '1.6' }}>No session fee. No deposit. No card. You only ever pay for photos you love, after you’ve seen them.</p>
                 </div>
@@ -161,14 +161,13 @@ export default function PhotographyWebsite() {
             <section style={{ padding: '4rem 2rem', backgroundColor: '#556B5F', color: 'white' }}>
               <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
                 <p style={{ fontSize: '0.85rem', letterSpacing: '2px', color: '#C4B5A8', marginBottom: '1rem' }}>HOW IT WORKS</p>
-                <h2 style={{ fontSize: '2.5rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>Easy as a walk in the park.</h2>
-                <p style={{ color: '#D4C5B9', marginBottom: '3rem', fontSize: '1.05rem' }}>We stripped out everything families hate about booking photos.</p>
+                <h2 style={{ fontSize: '2.5rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>Simple, start to finish.</h2>
+                <p style={{ color: '#D4C5B9', marginBottom: '3rem', fontSize: '1.05rem' }}>No deposits. No forms. No phone tag.</p>
 
                 <div style={{ display: 'grid', gap: '2rem' }}>
                   {processSteps.map((step) => (
                     <div key={step.number} style={{ backgroundColor: 'rgba(255, 255, 255, 0.08)', padding: '2rem', borderRadius: '12px', borderLeft: '3px solid #A88E7F' }}>
                       <div style={{ display: 'flex', alignItems: 'flex-start', gap: '2rem' }}>
-                        <div style={{ fontSize: '2.5rem', minWidth: '60px' }}>{step.icon}</div>
                         <div>
                           <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>{step.number}. {step.title}</h3>
                           <p style={{ fontSize: '1rem', lineHeight: 1.6, color: '#D4C5B9' }}>{step.desc}</p>
@@ -211,7 +210,7 @@ export default function PhotographyWebsite() {
 
               <div style={{ backgroundColor: '#2C3E2F', color: '#A88E7F', padding: '1.5rem', marginTop: '2rem', borderRadius: '12px', textAlign: 'center', fontSize: '0.95rem' }}>
                 <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  🛡️ Nothing due today. You choose a collection only after your gallery arrives.
+                  Nothing due today. You choose a collection only after your gallery arrives.
                 </span>
               </div>
             </section>
@@ -219,8 +218,8 @@ export default function PhotographyWebsite() {
             {/* Gallery */}
             <section style={{ padding: '4rem 2rem', backgroundColor: '#F9F7F4' }}>
               <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-                <p style={{ fontSize: '0.85rem', letterSpacing: '2px', color: '#A88E7F', marginBottom: '1rem' }}>FRESH FROM THE FOREST FLOOR</p>
-                <h2 style={{ fontSize: '2.5rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>Real families, real light, zero stiff poses.</h2>
+                <p style={{ fontSize: '0.85rem', letterSpacing: '2px', color: '#A88E7F', marginBottom: '1rem' }}>RECENT WORK</p>
+                <h2 style={{ fontSize: '2.5rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>Recent sessions.</h2>
                 <p style={{ color: '#666', marginBottom: '3rem', fontSize: '1.05rem' }}>A few favourites from recent sessions around Langley &amp; Surrey.</p>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem' }}>
@@ -254,11 +253,11 @@ export default function PhotographyWebsite() {
                 </div>
                 <div style={{ display: 'grid', gap: '1rem' }}>
                   <div style={{ backgroundColor: 'rgba(255,255,255,0.08)', padding: '1.5rem', borderRadius: '12px' }}>
-                    <h3 style={{ fontSize: '1.2rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>🍽️ The Menu Refresh</h3>
+                    <h3 style={{ fontSize: '1.2rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>The Menu Refresh</h3>
                     <p style={{ color: '#D4C5B9', fontSize: '0.95rem', lineHeight: 1.6 }}>10 signature dishes, styled and shot at your restaurant. Made for menus, Instagram, and delivery apps.</p>
                   </div>
                   <div style={{ backgroundColor: 'rgba(255,255,255,0.08)', padding: '1.5rem', borderRadius: '12px' }}>
-                    <h3 style={{ fontSize: '1.2rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>📦 The Product Set</h3>
+                    <h3 style={{ fontSize: '1.2rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>The Product Set</h3>
                     <p style={{ color: '#D4C5B9', fontSize: '0.95rem', lineHeight: 1.6 }}>Clean, consistent product photography for your online shop — no more phone snaps on the counter.</p>
                   </div>
                 </div>
@@ -266,12 +265,12 @@ export default function PhotographyWebsite() {
             </section>
 
             {/* Urgency */}
-            <section style={{ backgroundImage: 'linear-gradient(rgba(85, 107, 95, 0.65), rgba(85, 107, 95, 0.65)), url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 400%22%3E%3Crect fill=%22%23556B5F%22 width=%221200%22 height=%22400%22/%3E%3C/svg%3E")', backgroundSize: 'cover', backgroundPosition: 'center', color: 'white', padding: '4rem 2rem', textAlign: 'center' }}>
+            <section style={{ backgroundColor: '#556B5F', color: 'white', padding: '4rem 2rem', textAlign: 'center' }}>
               <div style={{ maxWidth: '700px', margin: '0 auto' }}>
                 <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.15)', padding: '0.8rem 1.5rem', borderRadius: '30px', display: 'inline-block', marginBottom: '2rem', fontSize: '0.85rem', letterSpacing: '1px' }}>
-                  🍂 FALL &amp; HOLIDAY 2026
+                  FALL &amp; HOLIDAY 2026
                 </div>
-                <h2 style={{ fontSize: '2.8rem', marginBottom: '1rem', fontWeight: 'normal' }}>Holiday cards wait for no one.</h2>
+                <h2 style={{ fontSize: '2.8rem', marginBottom: '1rem', fontWeight: 'normal' }}>Fall dates fill fast.</h2>
                 <p style={{ fontSize: '1.1rem', marginBottom: '2rem', opacity: 0.95 }}>Fall colour peaks in October and it’s gone in a blink. Christmas minis run November through mid-December — reserve early enough that your gallery’s back in time for cards.</p>
                 <button onClick={goBooking} style={{ backgroundColor: '#A88E7F', color: 'white', border: 'none', padding: '1rem 2.5rem', fontSize: '1.05rem', cursor: 'pointer', borderRadius: '50px', fontFamily: 'inherit' }}>Reserve my session</button>
               </div>
@@ -311,7 +310,7 @@ export default function PhotographyWebsite() {
 
             {/* Footer */}
             <section style={{ backgroundColor: '#556B5F', color: '#C4B5A8', padding: '3rem 2rem', textAlign: 'center' }}>
-              <p style={{ marginBottom: '1rem' }}>📍 Langley &amp; Surrey, BC</p>
+              <p style={{ marginBottom: '1rem' }}>Langley &amp; Surrey, BC</p>
               <button onClick={goBooking} style={{ backgroundColor: 'transparent', color: '#C4B5A8', border: '1px solid #C4B5A8', padding: '0.8rem 1.5rem', fontSize: '0.95rem', cursor: 'pointer', borderRadius: '50px', fontFamily: 'inherit', marginBottom: '2rem' }}>Get in Touch</button>
               <p style={{ fontSize: '0.9rem' }}>© 2026 Moss &amp; Timber Photography. All rights reserved.</p>
             </section>
@@ -336,7 +335,7 @@ export default function PhotographyWebsite() {
               />
 
               <div style={{ backgroundColor: '#F9F7F4', padding: '1.5rem', borderRadius: '12px', marginBottom: '2rem', borderLeft: '3px solid #A88E7F' }}>
-                <p style={{ fontSize: '0.95rem', color: '#666', lineHeight: 1.6 }}>🛡️ Booking is free — no card, no deposit. You’ll only ever pay if you love your gallery.</p>
+                <p style={{ fontSize: '0.95rem', color: '#666', lineHeight: 1.6 }}>Booking is free — no card, no deposit. You’ll only ever pay if you love your gallery.</p>
               </div>
             </div>
           </section>
