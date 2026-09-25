@@ -126,7 +126,7 @@ export default function PhotographyWebsite() {
                   </div>
                 </div>
                 <div>
-                  <img src="/photos/photo1.jpg" alt="Family session at golden hour in the park — Moss & Timber Photography" style={{ borderRadius: '16px', width: '100%', aspectRatio: '4/5', objectFit: 'cover' }} />
+                  <img src="/photos/hero-family.jpg" alt="Fall family session — couple with their young child, Moss & Timber Photography" style={{ borderRadius: '16px', width: '100%', aspectRatio: '4/5', objectFit: 'cover' }} />
                 </div>
               </div>
             </section>
