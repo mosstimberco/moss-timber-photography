@@ -80,7 +80,7 @@ export default function PhotographyWebsite() {
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "LocalBusiness",
+          "@type": "ProfessionalService",
           "name": "Moss & Timber Photography",
           "description": "Family mini photo sessions and food & e-commerce photography in Langley & Surrey, BC. Free to reserve — pay only for photos you love.",
           "address": {
@@ -90,9 +90,23 @@ export default function PhotographyWebsite() {
             "addressCountry": "CA"
           },
           "url": "https://mosstimberco.com",
-          "image": "https://mosstimberco.com/photos/photo1.jpg",
-          "sameAs": ["https://www.instagram.com/mossandtimber"],
+          "image": "https://mosstimberco.com/photos/hero-family.jpg",
+          "telephone": "+1-778-840-4033",
+          "email": "mosstimberco@gmail.com",
+          "priceRange": "$$",
+          "sameAs": ["https://www.facebook.com/profile.php?id=61594366961855", "https://www.instagram.com/mossandtimber"],
           "areaServed": ["Langley, BC", "Surrey, BC"]
+        })}
+      </script>
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": faqItems.map((item) => ({
+            "@type": "Question",
+            "name": item.q,
+            "acceptedAnswer": { "@type": "Answer", "text": item.a }
+          }))
         })}
       </script>
       <div style={{ fontFamily: "'Montserrat', sans-serif", backgroundColor: '#F5F1E8', color: '#2C3E2F', minHeight: '100vh' }}>
@@ -118,7 +132,8 @@ export default function PhotographyWebsite() {
                   <div style={{ border: '1px solid rgba(255, 255, 255, 0.35)', padding: '0.6rem 1.25rem', borderRadius: '30px', display: 'inline-block', marginBottom: '1.5rem', fontSize: '0.8rem', letterSpacing: '2px' }}>
                     FALL &amp; HOLIDAY MINIS — NOW BOOKING
                   </div>
-                  <h1 style={{ fontSize: '3rem', marginBottom: '1rem', fontWeight: 'normal', lineHeight: 1.2 }}>Where family stories are rooted in nature.</h1>
+                  <p style={{ fontSize: '1.15rem', fontStyle: 'italic', marginBottom: '0.75rem', opacity: 0.85 }}>Where family stories are rooted in nature.</p>
+                  <h1 style={{ fontSize: '3rem', marginBottom: '1rem', fontWeight: 'normal', lineHeight: 1.2 }}>Family photographer in Langley &amp; Surrey, BC</h1>
                   <p style={{ fontSize: '1.1rem', marginBottom: '2rem', opacity: 0.9, lineHeight: 1.6 }}>Thirty unhurried minutes under the maples of Langley &amp; Surrey. You pay nothing to reserve — and nothing at all unless you love the photos.</p>
                   <div>
                     <button onClick={goBooking} style={{ backgroundColor: '#A88E7F', color: 'white', border: 'none', padding: '1rem 2.5rem', fontSize: '1.05rem', cursor: 'pointer', borderRadius: '50px', fontFamily: 'inherit' }}>Reserve my session</button>
