@@ -133,13 +133,20 @@ export default function PhotographyWebsite() {
         })}
       </script>
       <div style={{ fontFamily: "'Montserrat', sans-serif", backgroundColor: '#F5F1E8', color: '#2C3E2F', minHeight: '100vh' }}>
+        <style>{`
+          @media (max-width: 640px) {
+            .site-nav { flex-direction: column !important; align-items: stretch !important; gap: 0.75rem !important; padding: 1rem 1.25rem !important; }
+            .site-nav .nav-logo { font-size: 1.2rem !important; text-align: left !important; }
+            .site-nav .nav-links { justify-content: flex-start !important; gap: 1rem !important; flex-wrap: wrap !important; }
+          }
+        `}</style>
 
         {/* Navigation */}
-        <nav style={{ backgroundColor: '#F5F1E8', padding: '1.25rem 1.5rem', borderBottom: '1px solid #D4C5B9', display: 'flex', alignItems: 'center', justifyContent: 'space-between', maxWidth: '1100px', margin: '0 auto' }}>
-          <button onClick={() => setCurrentPage('home')} style={{ background: 'none', border: 'none', fontSize: '1.4rem', fontWeight: 'bold', cursor: 'pointer', color: '#2C3E2F', fontFamily: 'inherit' }}>
+        <nav className="site-nav" style={{ backgroundColor: '#F5F1E8', padding: '1.25rem 1.5rem', borderBottom: '1px solid #D4C5B9', display: 'flex', alignItems: 'center', justifyContent: 'space-between', maxWidth: '1100px', margin: '0 auto' }}>
+          <button className="nav-logo" onClick={() => setCurrentPage('home')} style={{ background: 'none', border: 'none', fontSize: '1.4rem', fontWeight: 'bold', cursor: 'pointer', color: '#2C3E2F', fontFamily: 'inherit' }}>
             Moss &amp; Timber
           </button>
-          <div style={{ display: 'flex', gap: '1.25rem', alignItems: 'center' }}>
+          <div className="nav-links" style={{ display: 'flex', gap: '1.25rem', alignItems: 'center' }}>
             <button onClick={() => { setCurrentPage('home'); setTimeout(() => document.getElementById('packages')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#2C3E2F', fontSize: '0.95rem', fontFamily: 'inherit' }}>Sessions</button>
             <button onClick={() => { setCurrentPage('home'); setTimeout(() => document.getElementById('food')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#2C3E2F', fontSize: '0.95rem', fontFamily: 'inherit' }}>For Business</button>
             <button onClick={goBooking} style={{ backgroundColor: '#2C3E2F', color: 'white', border: 'none', padding: '0.7rem 1.4rem', fontSize: '0.95rem', cursor: 'pointer', borderRadius: '50px', fontFamily: 'inherit' }}>Reserve free</button>
@@ -158,9 +165,9 @@ export default function PhotographyWebsite() {
                   <p style={{ fontSize: '1.15rem', fontStyle: 'italic', marginBottom: '0.75rem', opacity: 0.85 }}>Where family stories are rooted in nature.</p>
                   <h1 style={{ fontSize: '3rem', marginBottom: '1rem', fontWeight: 'normal', lineHeight: 1.2 }}>Family photographer in Langley &amp; Surrey, BC</h1>
                   <p style={{ fontSize: '1.1rem', marginBottom: '2rem', opacity: 0.9, lineHeight: 1.6 }}>Thirty unhurried minutes under the maples of Langley &amp; Surrey. You pay nothing to reserve — and nothing at all unless you love the photos.</p>
-                  <div>
-                    <button onClick={goBooking} style={{ backgroundColor: '#A88E7F', color: 'white', border: 'none', padding: '1rem 2.5rem', fontSize: '1.05rem', cursor: 'pointer', borderRadius: '50px', fontFamily: 'inherit' }}>Reserve my session</button>
-                    <button onClick={() => document.getElementById('packages')?.scrollIntoView({ behavior: 'smooth' })} style={{ backgroundColor: 'transparent', color: 'white', border: '1px solid white', padding: '1rem 2.5rem', fontSize: '1.05rem', cursor: 'pointer', borderRadius: '50px', fontFamily: 'inherit', marginLeft: '1rem' }}>See collections</button>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
+                    <button onClick={goBooking} style={{ backgroundColor: '#A88E7F', color: 'white', border: 'none', padding: '1rem 2.5rem', fontSize: '1.05rem', cursor: 'pointer', borderRadius: '50px', fontFamily: 'inherit', minWidth: '15rem', boxSizing: 'border-box', textAlign: 'center' }}>Reserve my session</button>
+                    <button onClick={() => document.getElementById('packages')?.scrollIntoView({ behavior: 'smooth' })} style={{ backgroundColor: 'transparent', color: 'white', border: '1px solid white', padding: '1rem 2.5rem', fontSize: '1.05rem', cursor: 'pointer', borderRadius: '50px', fontFamily: 'inherit', minWidth: '15rem', boxSizing: 'border-box', textAlign: 'center' }}>See collections</button>
                   </div>
                   <p style={{ marginTop: '1.25rem', fontSize: '0.9rem', opacity: 0.85 }}>No card · No deposit · Walk away free if you don’t love them</p>
                 </div>
