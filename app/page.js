@@ -152,7 +152,7 @@ export default function PhotographyWebsite() {
             .site-nav .nav-logo { font-size: 1.05rem !important; letter-spacing: 3px !important; }
             .hero-nav { display: none !important; }
             .hero-section { padding: var(--s4) var(--s6) var(--s12) !important; }
-            .hero-grid { gap: 2rem !important; }
+            .hero-grid { gap: var(--s6) !important; }
             .hero-image { order: -1 !important; }
             .hero-image img { aspect-ratio: 4/5 !important; max-height: 480px !important; object-position: center top !important; }
             .hero-kicker { display: none !important; }
@@ -182,7 +182,7 @@ export default function PhotographyWebsite() {
               <div className="hero-grid" style={{ maxWidth: '1100px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', alignItems: 'center' }}>
                 <div>
                   <p className="hero-subline" style={{ fontSize: '1.15rem', fontStyle: 'italic', marginBottom: '0.75rem', opacity: 0.85 }}>Where family stories are rooted in nature.</p>
-                  <h1 className="hero-title" style={{ fontSize: '3rem', marginBottom: '1rem', fontWeight: 'normal', lineHeight: 1.2 }}>Family photographer in Langley &amp; Surrey, BC</h1>
+                  <h1 className="hero-title" style={{ fontSize: '3rem', marginBottom: '1rem', fontWeight: 'normal', lineHeight: 1.2 }}>Family photography in Langley &amp; Surrey, BC</h1>
                   <p className="hero-desc" style={{ fontSize: '1.1rem', marginBottom: '2rem', opacity: 0.9, lineHeight: 1.6 }}>Thirty unhurried minutes under the maples of Langley &amp; Surrey. You pay nothing to reserve — and nothing at all unless you love the photos.</p>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
                     <button onClick={goBooking} style={{ backgroundColor: '#A88E7F', color: 'white', border: 'none', padding: '1rem 2.5rem', fontSize: '1.05rem', cursor: 'pointer', borderRadius: '50px', fontFamily: 'inherit', minWidth: '15rem', boxSizing: 'border-box', textAlign: 'center' }}>Reserve my session</button>
