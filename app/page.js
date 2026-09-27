@@ -134,9 +134,9 @@ export default function PhotographyWebsite() {
       <div style={{ fontFamily: "'Montserrat', sans-serif", backgroundColor: '#F5F1E8', color: '#2C3E2F', minHeight: '100vh' }}>
         <style>{`
           @media (max-width: 640px) {
-            .site-nav { flex-direction: column !important; align-items: stretch !important; gap: 0.75rem !important; padding: 1rem 1.25rem !important; }
-            .site-nav .nav-logo { font-size: 1.2rem !important; text-align: left !important; }
-            .site-nav .nav-links { justify-content: flex-start !important; gap: 1rem !important; flex-wrap: wrap !important; }
+            .site-nav { padding: 1rem 1.25rem !important; }
+            .site-nav .nav-logo { font-size: 1.2rem !important; }
+            .hero-nav { justify-content: flex-start !important; gap: 1rem !important; margin-bottom: 2rem !important; }
             .hero-section { padding: 2.5rem 1.5rem !important; }
             .hero-grid { gap: 2rem !important; }
             .hero-image { order: -1 !important; }
@@ -150,17 +150,18 @@ export default function PhotographyWebsite() {
           <button className="nav-logo" onClick={() => setCurrentPage('home')} style={{ background: 'none', border: 'none', fontSize: '1.4rem', fontWeight: 'bold', cursor: 'pointer', color: '#2C3E2F', fontFamily: 'inherit' }}>
             Moss &amp; Timber
           </button>
-          <div className="nav-links" style={{ display: 'flex', gap: '1.25rem', alignItems: 'center' }}>
-            <button onClick={() => { setCurrentPage('home'); setTimeout(() => document.getElementById('packages')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#2C3E2F', fontSize: '0.95rem', fontFamily: 'inherit' }}>Sessions</button>
-            <button onClick={() => { setCurrentPage('home'); setTimeout(() => document.getElementById('food')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#2C3E2F', fontSize: '0.95rem', fontFamily: 'inherit' }}>For Business</button>
-            <button onClick={goBooking} style={{ backgroundColor: '#2C3E2F', color: 'white', border: 'none', padding: '0.7rem 1.4rem', fontSize: '0.95rem', cursor: 'pointer', borderRadius: '50px', fontFamily: 'inherit' }}>Reserve free</button>
-          </div>
         </nav>
 
         {currentPage === 'home' && (
           <>
             {/* Hero */}
             <section className="hero-section" style={{ backgroundColor: '#2C3E2F', color: 'white', padding: '4rem 2rem' }}>
+              <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+                <div className="hero-nav" style={{ display: 'flex', justifyContent: 'flex-end', gap: '1.5rem', alignItems: 'center', marginBottom: '2.5rem', flexWrap: 'wrap' }}>
+                  <button onClick={() => { setCurrentPage('home'); setTimeout(() => document.getElementById('packages')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#F5F1E8', fontSize: '0.95rem', fontFamily: 'inherit' }}>Sessions</button>
+                  <button onClick={() => { setCurrentPage('home'); setTimeout(() => document.getElementById('food')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#F5F1E8', fontSize: '0.95rem', fontFamily: 'inherit' }}>For Business</button>
+                  <button onClick={goBooking} style={{ backgroundColor: '#A88E7F', color: 'white', border: 'none', padding: '0.7rem 1.4rem', fontSize: '0.95rem', cursor: 'pointer', borderRadius: '50px', fontFamily: 'inherit' }}>Reserve free</button>
+                </div>
               <div className="hero-grid" style={{ maxWidth: '1100px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', alignItems: 'center' }}>
                 <div>
                   <div style={{ border: '1px solid rgba(255, 255, 255, 0.35)', padding: '0.6rem 1.25rem', borderRadius: '30px', display: 'inline-block', marginBottom: '1.5rem', fontSize: '0.8rem', letterSpacing: '2px' }}>
@@ -178,6 +179,7 @@ export default function PhotographyWebsite() {
                 <div className="hero-image">
                   <img src="/photos/hero-family.jpg" alt="Fall family session — couple with their young child, Moss & Timber Photography" style={{ borderRadius: '16px', width: '100%', aspectRatio: '4/5', objectFit: 'cover' }} />
                 </div>
+              </div>
               </div>
             </section>
 
