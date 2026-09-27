@@ -133,11 +133,25 @@ export default function PhotographyWebsite() {
       </script>
       <div style={{ fontFamily: "'Montserrat', sans-serif", backgroundColor: '#F5F1E8', color: '#2C3E2F', minHeight: '100vh' }}>
         <style>{`
+          :root {
+            --s1: 0.25rem;
+            --s2: 0.5rem;
+            --s3: 0.75rem;
+            --s4: 1rem;
+            --s5: 1.25rem;
+            --s6: 1.5rem;
+            --s8: 2rem;
+            --s12: 3rem;
+            --s16: 4rem;
+            --s24: 6rem;
+          }
+          .section { padding: var(--s24) var(--s6); }
           @media (max-width: 640px) {
-            .site-nav { padding: 1rem 1.25rem !important; }
+            .section { padding: var(--s16) var(--s5); }
+            .site-nav { padding: var(--s4) var(--s5) !important; }
             .site-nav .nav-logo { font-size: 1.05rem !important; letter-spacing: 3px !important; }
             .hero-nav { display: none !important; }
-            .hero-section { padding: 1rem 1.5rem 2.5rem !important; }
+            .hero-section { padding: var(--s4) var(--s6) var(--s12) !important; }
             .hero-grid { gap: 2rem !important; }
             .hero-image { order: -1 !important; }
             .hero-image img { aspect-ratio: 4/5 !important; max-height: 480px !important; object-position: center top !important; }
@@ -149,7 +163,7 @@ export default function PhotographyWebsite() {
         `}</style>
 
         {/* Navigation */}
-        <nav className="site-nav" style={{ backgroundColor: '#F5F1E8', padding: '1.25rem 1.5rem', borderBottom: '1px solid #D4C5B9', display: 'flex', alignItems: 'center', justifyContent: 'space-between', maxWidth: '1100px', margin: '0 auto' }}>
+        <nav className="site-nav" style={{ backgroundColor: '#F5F1E8', padding: 'var(--s5) var(--s6)', borderBottom: '1px solid #D4C5B9', display: 'flex', alignItems: 'center', justifyContent: 'space-between', maxWidth: '1100px', margin: '0 auto' }}>
           <button className="nav-logo" onClick={() => setCurrentPage('home')} style={{ background: 'none', border: 'none', fontSize: '1.25rem', fontWeight: '600', cursor: 'pointer', color: '#2C3E2F', fontFamily: 'var(--font-cormorant), Georgia, serif', textTransform: 'uppercase', letterSpacing: '4px' }}>
             Moss &amp; Timber
           </button>
@@ -158,9 +172,9 @@ export default function PhotographyWebsite() {
         {currentPage === 'home' && (
           <>
             {/* Hero */}
-            <section className="hero-section" style={{ backgroundColor: '#2C3E2F', color: 'white', padding: '1.25rem 2rem 4rem' }}>
+            <section className="hero-section" style={{ backgroundColor: '#2C3E2F', color: 'white', padding: 'var(--s5) var(--s8) var(--s16)' }}>
               <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-                <div className="hero-nav" style={{ display: 'flex', justifyContent: 'flex-end', gap: '1.5rem', alignItems: 'center', marginBottom: '2.5rem', flexWrap: 'wrap' }}>
+                <div className="hero-nav" style={{ display: 'flex', justifyContent: 'flex-end', gap: '1.5rem', alignItems: 'center', marginBottom: 'var(--s12)', flexWrap: 'wrap' }}>
                   <button className="hero-nav-secondary" onClick={() => { setCurrentPage('home'); setTimeout(() => document.getElementById('packages')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#F5F1E8', fontSize: '0.95rem', fontFamily: 'inherit' }}>Sessions</button>
                   <button className="hero-nav-secondary" onClick={() => { setCurrentPage('home'); setTimeout(() => document.getElementById('food')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#F5F1E8', fontSize: '0.95rem', fontFamily: 'inherit' }}>For Business</button>
                   <button onClick={goBooking} style={{ backgroundColor: '#A88E7F', color: 'white', border: 'none', padding: '0.7rem 1.4rem', fontSize: '0.95rem', cursor: 'pointer', borderRadius: '50px', fontFamily: 'inherit' }}>Reserve free</button>
@@ -174,8 +188,8 @@ export default function PhotographyWebsite() {
                     <button onClick={goBooking} style={{ backgroundColor: '#A88E7F', color: 'white', border: 'none', padding: '1rem 2.5rem', fontSize: '1.05rem', cursor: 'pointer', borderRadius: '50px', fontFamily: 'inherit', minWidth: '15rem', boxSizing: 'border-box', textAlign: 'center' }}>Reserve my session</button>
                     <button className="hero-cta-secondary" onClick={() => document.getElementById('packages')?.scrollIntoView({ behavior: 'smooth' })} style={{ backgroundColor: 'transparent', color: 'white', border: '1px solid white', padding: '1rem 2.5rem', fontSize: '1.05rem', cursor: 'pointer', borderRadius: '50px', fontFamily: 'inherit', minWidth: '15rem', boxSizing: 'border-box', textAlign: 'center' }}>See collections</button>
                   </div>
-                  <p className="hero-trust" style={{ marginTop: '1.25rem', fontSize: '0.9rem', opacity: 0.85 }}>No card · No deposit · Walk away free if you don’t love them</p>
-                  <div className="hero-kicker" style={{ marginTop: '2.5rem', paddingTop: '1.25rem', borderTop: '1px solid rgba(255,255,255,0.25)', fontSize: '0.7rem', letterSpacing: '3px', opacity: 0.7 }}>
+                  <p className="hero-trust" style={{ marginTop: 'var(--s6)', fontSize: '0.9rem', opacity: 0.85 }}>No card · No deposit · Walk away free if you don’t love them</p>
+                  <div className="hero-kicker" style={{ marginTop: 'var(--s12)', paddingTop: 'var(--s5)', borderTop: '1px solid rgba(255,255,255,0.25)', fontSize: '0.7rem', letterSpacing: '3px', opacity: 0.7 }}>
                     FALL &amp; HOLIDAY MINIS — NOW BOOKING
                   </div>
                 </div>
@@ -187,7 +201,7 @@ export default function PhotographyWebsite() {
             </section>
 
             {/* Details */}
-            <section style={{ padding: '4rem 2rem', maxWidth: '1000px', margin: '0 auto' }}>
+            <section className="section" style={{ maxWidth: '1000px', margin: '0 auto' }}>
               <p style={{ fontSize: '0.85rem', letterSpacing: '2px', color: '#A88E7F', marginBottom: '1rem' }}>GOOD TO KNOW</p>
               <h2 style={{ fontSize: '2.5rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>Thirty minutes, zero risk, photos you’ll actually frame.</h2>
               <p style={{ color: '#666', marginBottom: '3rem', fontSize: '1.05rem' }}>For families who want beautiful photos without the fuss.</p>
@@ -213,7 +227,7 @@ export default function PhotographyWebsite() {
             </section>
 
             {/* How It Works */}
-            <section style={{ padding: '4rem 2rem', backgroundColor: '#556B5F', color: 'white' }}>
+            <section className="section" style={{ backgroundColor: '#556B5F', color: 'white' }}>
               <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
                 <p style={{ fontSize: '0.85rem', letterSpacing: '2px', color: '#C4B5A8', marginBottom: '1rem' }}>HOW IT WORKS</p>
                 <h2 style={{ fontSize: '2.5rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>Simple, start to finish.</h2>
@@ -235,7 +249,7 @@ export default function PhotographyWebsite() {
             </section>
 
             {/* Packages */}
-            <section id="packages" style={{ padding: '4rem 2rem', maxWidth: '1000px', margin: '0 auto' }}>
+            <section id="packages" className="section" style={{ maxWidth: '1000px', margin: '0 auto' }}>
               <p style={{ fontSize: '0.85rem', letterSpacing: '2px', color: '#A88E7F', marginBottom: '1rem' }}>COLLECTIONS</p>
               <h2 style={{ fontSize: '2.5rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>Pay only for the photos you’d frame.</h2>
               <p style={{ color: '#666', marginBottom: '3rem', fontSize: '1.05rem' }}>Every collection includes professional editing, high-resolution downloads, and personal printing rights.</p>
@@ -244,7 +258,7 @@ export default function PhotographyWebsite() {
                 {packages.map((pkg) => (
                   <div key={pkg.id} style={{ backgroundColor: pkg.badge ? '#556B5F' : 'white', color: pkg.badge ? 'white' : '#2C3E2F', padding: '2rem', borderRadius: '16px', border: pkg.badge ? '2px solid #A88E7F' : '1px solid #D4C5B9', position: 'relative' }}>
                     {pkg.badge && (
-                      <div style={{ position: 'absolute', top: '-12px', left: '50%', transform: 'translateX(-50%)', backgroundColor: '#A88E7F', color: 'white', padding: '0.4rem 1rem', fontSize: '0.75rem', letterSpacing: '1px', borderRadius: '20px' }}>
+                      <div style={{ position: 'absolute', top: '-12px', left: '50%', transform: 'translateX(-50%)', backgroundColor: '#A88E7F', color: 'white', padding: 'var(--s2) var(--s4)', fontSize: '0.75rem', letterSpacing: '1px', borderRadius: '20px' }}>
                         {pkg.badge}
                       </div>
                     )}
@@ -253,8 +267,8 @@ export default function PhotographyWebsite() {
                     <p style={{ fontSize: '2.2rem', marginBottom: '1.5rem', fontWeight: 'normal' }}>${pkg.price}</p>
                     <ul style={{ listStyle: 'none', padding: 0, marginBottom: '1.5rem' }}>
                       {pkg.features.map((feature, i) => (
-                        <li key={i} style={{ marginBottom: '0.8rem', fontSize: '0.95rem', display: 'flex', alignItems: 'center' }}>
-                          <span style={{ marginRight: '0.8rem' }}>✓</span> {feature}
+                        <li key={i} style={{ marginBottom: 'var(--s3)', fontSize: '0.95rem', display: 'flex', alignItems: 'center' }}>
+                          <span style={{ marginRight: 'var(--s3)' }}>✓</span> {feature}
                         </li>
                       ))}
                     </ul>
@@ -271,7 +285,7 @@ export default function PhotographyWebsite() {
             </section>
 
             {/* Gallery */}
-            <section style={{ padding: '4rem 2rem', backgroundColor: '#F9F7F4' }}>
+            <section className="section" style={{ backgroundColor: '#F9F7F4' }}>
               <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
                 <p style={{ fontSize: '0.85rem', letterSpacing: '2px', color: '#A88E7F', marginBottom: '1rem' }}>PORTFOLIO</p>
                 <h2 style={{ fontSize: '2.5rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>The look.</h2>
@@ -296,7 +310,7 @@ export default function PhotographyWebsite() {
             </section>
 
             {/* Food & Business */}
-            <section id="food" style={{ padding: '4rem 2rem', backgroundColor: '#2C3E2F', color: 'white' }}>
+            <section id="food" className="section" style={{ backgroundColor: '#2C3E2F', color: 'white' }}>
               <div style={{ maxWidth: '1000px', margin: '0 auto', display: 'grid', gap: '2rem', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', alignItems: 'center' }}>
                 <div>
                   <p style={{ fontSize: '0.85rem', letterSpacing: '2px', color: '#A88E7F', marginBottom: '1rem' }}>FOR LOCAL BUSINESS</p>
@@ -320,9 +334,9 @@ export default function PhotographyWebsite() {
             </section>
 
             {/* Urgency */}
-            <section style={{ backgroundColor: '#556B5F', color: 'white', padding: '4rem 2rem', textAlign: 'center' }}>
+            <section className="section" style={{ backgroundColor: '#556B5F', color: 'white', textAlign: 'center' }}>
               <div style={{ maxWidth: '700px', margin: '0 auto' }}>
-                <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.15)', padding: '0.8rem 1.5rem', borderRadius: '30px', display: 'inline-block', marginBottom: '2rem', fontSize: '0.85rem', letterSpacing: '1px' }}>
+                <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.15)', padding: 'var(--s3) var(--s6)', borderRadius: '30px', display: 'inline-block', marginBottom: '2rem', fontSize: '0.85rem', letterSpacing: '1px' }}>
                   FALL MINI SESSIONS 2026 · LIMITED WEEKEND SLOTS
                 </div>
                 <h2 style={{ fontSize: '2.8rem', marginBottom: '1rem', fontWeight: 'normal' }}>Once a year, the maples turn.</h2>
@@ -332,7 +346,7 @@ export default function PhotographyWebsite() {
             </section>
 
             {/* FAQ */}
-            <section id="faq" style={{ padding: '4rem 2rem', backgroundColor: '#F9F7F4' }}>
+            <section id="faq" className="section" style={{ backgroundColor: '#F9F7F4' }}>
               <div style={{ maxWidth: '800px', margin: '0 auto' }}>
                 <p style={{ fontSize: '0.85rem', letterSpacing: '2px', color: '#A88E7F', marginBottom: '1rem' }}>BEFORE YOU ASK</p>
                 <h2 style={{ fontSize: '2.5rem', marginBottom: '3rem', fontWeight: 'normal' }}>Questions families actually ask.</h2>
@@ -356,7 +370,7 @@ export default function PhotographyWebsite() {
             </section>
 
             {/* Waitlist */}
-            <section style={{ padding: '4rem 2rem', maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
+            <section className="section" style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
               <p style={{ fontSize: '0.85rem', letterSpacing: '2px', color: '#A88E7F', marginBottom: '1rem' }}>FIRST TO KNOW</p>
               <h2 style={{ fontSize: '2.2rem', marginBottom: '1rem', fontWeight: 'normal' }}>Get first dibs on new dates</h2>
               <p style={{ color: '#666', marginBottom: '2rem', fontSize: '1rem' }}>Fall slots go to the waitlist before anyone else. Join free — no spam, just first pick of new dates in your city.</p>
@@ -368,18 +382,18 @@ export default function PhotographyWebsite() {
               ) : (
                 <form onSubmit={submitWaitlist} style={{ maxWidth: '500px', margin: '0 auto', display: 'grid', gap: '1rem', textAlign: 'left' }}>
                   <input type="text" required placeholder="Your name" value={waitlist.name} onChange={(e) => setWaitlist({ ...waitlist, name: e.target.value })}
-                    style={{ padding: '0.9rem 1.2rem', borderRadius: '12px', border: '1px solid #D4C5B9', fontSize: '1rem', fontFamily: 'inherit', backgroundColor: 'white', color: '#2C3E2F' }} />
+                    style={{ padding: 'var(--s4) var(--s5)', borderRadius: '12px', border: '1px solid #D4C5B9', fontSize: '1rem', fontFamily: 'inherit', backgroundColor: 'white', color: '#2C3E2F' }} />
                   <input type="email" required placeholder="Email address" value={waitlist.email} onChange={(e) => setWaitlist({ ...waitlist, email: e.target.value })}
-                    style={{ padding: '0.9rem 1.2rem', borderRadius: '12px', border: '1px solid #D4C5B9', fontSize: '1rem', fontFamily: 'inherit', backgroundColor: 'white', color: '#2C3E2F' }} />
+                    style={{ padding: 'var(--s4) var(--s5)', borderRadius: '12px', border: '1px solid #D4C5B9', fontSize: '1rem', fontFamily: 'inherit', backgroundColor: 'white', color: '#2C3E2F' }} />
                   <div className="waitlist-selects" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                     <select value={waitlist.city} onChange={(e) => setWaitlist({ ...waitlist, city: e.target.value })}
-                      style={{ padding: '0.9rem 1.2rem', borderRadius: '12px', border: '1px solid #D4C5B9', fontSize: '1rem', fontFamily: 'inherit', backgroundColor: 'white', color: '#2C3E2F' }}>
+                      style={{ padding: 'var(--s4) var(--s5)', borderRadius: '12px', border: '1px solid #D4C5B9', fontSize: '1rem', fontFamily: 'inherit', backgroundColor: 'white', color: '#2C3E2F' }}>
                       <option>Langley</option>
                       <option>Surrey</option>
                       <option>Elsewhere in the Lower Mainland</option>
                     </select>
                     <select value={waitlist.how} onChange={(e) => setWaitlist({ ...waitlist, how: e.target.value })}
-                      style={{ padding: '0.9rem 1.2rem', borderRadius: '12px', border: '1px solid #D4C5B9', fontSize: '1rem', fontFamily: 'inherit', backgroundColor: 'white', color: '#2C3E2F' }}>
+                      style={{ padding: 'var(--s4) var(--s5)', borderRadius: '12px', border: '1px solid #D4C5B9', fontSize: '1rem', fontFamily: 'inherit', backgroundColor: 'white', color: '#2C3E2F' }}>
                       <option>Facebook</option>
                       <option>Instagram</option>
                       <option>Google</option>
@@ -399,9 +413,9 @@ export default function PhotographyWebsite() {
             </section>
 
             {/* Footer */}
-            <section style={{ backgroundColor: '#556B5F', color: '#C4B5A8', padding: '3rem 2rem', textAlign: 'center' }}>
+            <section style={{ backgroundColor: '#556B5F', color: '#C4B5A8', padding: 'var(--s16) var(--s6)', textAlign: 'center' }}>
               <p style={{ marginBottom: '1rem' }}>Langley &amp; Surrey, BC</p>
-              <button onClick={goBooking} style={{ backgroundColor: 'transparent', color: '#C4B5A8', border: '1px solid #C4B5A8', padding: '0.8rem 1.5rem', fontSize: '0.95rem', cursor: 'pointer', borderRadius: '50px', fontFamily: 'inherit', marginBottom: '2rem' }}>Get in Touch</button>
+              <button onClick={goBooking} style={{ backgroundColor: 'transparent', color: '#C4B5A8', border: '1px solid #C4B5A8', padding: 'var(--s3) var(--s6)', fontSize: '0.95rem', cursor: 'pointer', borderRadius: '50px', fontFamily: 'inherit', marginBottom: '2rem' }}>Get in Touch</button>
               <p style={{ fontSize: '0.9rem' }}>© 2026 Moss &amp; Timber Photography. All rights reserved.</p>
             </section>
           </>
