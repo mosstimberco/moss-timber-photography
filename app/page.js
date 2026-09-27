@@ -166,7 +166,7 @@ export default function PhotographyWebsite() {
                 </div>
               <div className="hero-grid" style={{ maxWidth: '1100px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', alignItems: 'center' }}>
                 <div>
-                  <div style={{ border: '1px solid rgba(255, 255, 255, 0.35)', padding: '0.6rem 1.25rem', borderRadius: '30px', display: 'inline-block', marginBottom: '1.5rem', fontSize: '0.8rem', letterSpacing: '2px' }}>
+                  <div style={{ marginBottom: '1.25rem', fontSize: '0.75rem', letterSpacing: '3px', opacity: 0.7 }}>
                     FALL &amp; HOLIDAY MINIS — NOW BOOKING
                   </div>
                   <p className="hero-subline" style={{ fontSize: '1.15rem', fontStyle: 'italic', marginBottom: '0.75rem', opacity: 0.85 }}>Where family stories are rooted in nature.</p>
