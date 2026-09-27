@@ -152,7 +152,7 @@ export default function PhotographyWebsite() {
             .site-nav .nav-logo { font-size: 1.05rem !important; letter-spacing: 3px !important; }
             .hero-nav { display: none !important; }
             .hero-section { padding: var(--s4) var(--s6) var(--s12) !important; }
-            .hero-grid { gap: var(--s6) !important; }
+            .hero-grid { gap: var(--s4) !important; }
             .hero-image { order: -1 !important; }
             .hero-image img { aspect-ratio: 4/5 !important; max-height: 480px !important; object-position: center top !important; }
             .hero-kicker { display: none !important; }
