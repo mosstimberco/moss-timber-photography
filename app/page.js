@@ -138,6 +138,11 @@ export default function PhotographyWebsite() {
             .site-nav { flex-direction: column !important; align-items: stretch !important; gap: 0.75rem !important; padding: 1rem 1.25rem !important; }
             .site-nav .nav-logo { font-size: 1.2rem !important; text-align: left !important; }
             .site-nav .nav-links { justify-content: flex-start !important; gap: 1rem !important; flex-wrap: wrap !important; }
+            .hero-section { padding: 2.5rem 1.5rem !important; }
+            .hero-grid { gap: 2rem !important; }
+            .hero-image { order: -1 !important; }
+            .hero-image img { aspect-ratio: 4/3 !important; max-height: 300px !important; }
+            .hero-title { font-size: 2rem !important; }
           }
         `}</style>
 
@@ -156,14 +161,14 @@ export default function PhotographyWebsite() {
         {currentPage === 'home' && (
           <>
             {/* Hero */}
-            <section style={{ backgroundColor: '#2C3E2F', color: 'white', padding: '4rem 2rem' }}>
-              <div style={{ maxWidth: '1100px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', alignItems: 'center' }}>
+            <section className="hero-section" style={{ backgroundColor: '#2C3E2F', color: 'white', padding: '4rem 2rem' }}>
+              <div className="hero-grid" style={{ maxWidth: '1100px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', alignItems: 'center' }}>
                 <div>
                   <div style={{ border: '1px solid rgba(255, 255, 255, 0.35)', padding: '0.6rem 1.25rem', borderRadius: '30px', display: 'inline-block', marginBottom: '1.5rem', fontSize: '0.8rem', letterSpacing: '2px' }}>
                     FALL &amp; HOLIDAY MINIS — NOW BOOKING
                   </div>
                   <p style={{ fontSize: '1.15rem', fontStyle: 'italic', marginBottom: '0.75rem', opacity: 0.85 }}>Where family stories are rooted in nature.</p>
-                  <h1 style={{ fontSize: '3rem', marginBottom: '1rem', fontWeight: 'normal', lineHeight: 1.2 }}>Family photographer in Langley &amp; Surrey, BC</h1>
+                  <h1 className="hero-title" style={{ fontSize: '3rem', marginBottom: '1rem', fontWeight: 'normal', lineHeight: 1.2 }}>Family photographer in Langley &amp; Surrey, BC</h1>
                   <p style={{ fontSize: '1.1rem', marginBottom: '2rem', opacity: 0.9, lineHeight: 1.6 }}>Thirty unhurried minutes under the maples of Langley &amp; Surrey. You pay nothing to reserve — and nothing at all unless you love the photos.</p>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
                     <button onClick={goBooking} style={{ backgroundColor: '#A88E7F', color: 'white', border: 'none', padding: '1rem 2.5rem', fontSize: '1.05rem', cursor: 'pointer', borderRadius: '50px', fontFamily: 'inherit', minWidth: '15rem', boxSizing: 'border-box', textAlign: 'center' }}>Reserve my session</button>
@@ -171,7 +176,7 @@ export default function PhotographyWebsite() {
                   </div>
                   <p style={{ marginTop: '1.25rem', fontSize: '0.9rem', opacity: 0.85 }}>No card · No deposit · Walk away free if you don’t love them</p>
                 </div>
-                <div>
+                <div className="hero-image">
                   <img src="/photos/hero-family.jpg" alt="Fall family session — couple with their young child, Moss & Timber Photography" style={{ borderRadius: '16px', width: '100%', aspectRatio: '4/5', objectFit: 'cover' }} />
                 </div>
               </div>
