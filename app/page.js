@@ -135,7 +135,7 @@ export default function PhotographyWebsite() {
         <style>{`
           @media (max-width: 640px) {
             .site-nav { padding: 1rem 1.25rem !important; }
-            .site-nav .nav-logo { font-size: 1.2rem !important; }
+            .site-nav .nav-logo { font-size: 1.05rem !important; letter-spacing: 3px !important; }
             .hero-nav { display: none !important; }
             .hero-section { padding: 1rem 1.5rem 2.5rem !important; }
             .hero-grid { gap: 2rem !important; }
@@ -149,7 +149,7 @@ export default function PhotographyWebsite() {
 
         {/* Navigation */}
         <nav className="site-nav" style={{ backgroundColor: '#F5F1E8', padding: '1.25rem 1.5rem', borderBottom: '1px solid #D4C5B9', display: 'flex', alignItems: 'center', justifyContent: 'space-between', maxWidth: '1100px', margin: '0 auto' }}>
-          <button className="nav-logo" onClick={() => setCurrentPage('home')} style={{ background: 'none', border: 'none', fontSize: '1.4rem', fontWeight: 'bold', cursor: 'pointer', color: '#2C3E2F', fontFamily: 'inherit' }}>
+          <button className="nav-logo" onClick={() => setCurrentPage('home')} style={{ background: 'none', border: 'none', fontSize: '1.25rem', fontWeight: '500', cursor: 'pointer', color: '#2C3E2F', fontFamily: 'var(--font-cormorant), Georgia, serif', textTransform: 'uppercase', letterSpacing: '4px' }}>
             Moss &amp; Timber
           </button>
         </nav>
