@@ -140,7 +140,7 @@ export default function PhotographyWebsite() {
             .hero-section { padding: 1rem 1.5rem 2.5rem !important; }
             .hero-grid { gap: 2rem !important; }
             .hero-image { order: -1 !important; }
-            .hero-image img { aspect-ratio: 4/3 !important; max-height: 320px !important; object-position: center top !important; }
+            .hero-image img { aspect-ratio: 4/5 !important; max-height: 480px !important; object-position: center top !important; }
             .hero-kicker { display: none !important; }
             .hero-title { font-size: 2rem !important; }
             .hero-subline, .hero-desc, .hero-cta-secondary, .hero-trust { display: none !important; }
