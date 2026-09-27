@@ -142,6 +142,7 @@ export default function PhotographyWebsite() {
             .hero-image { order: -1 !important; }
             .hero-image img { aspect-ratio: 4/3 !important; max-height: 300px !important; }
             .hero-title { font-size: 2rem !important; }
+            .waitlist-selects { grid-template-columns: 1fr !important; }
           }
         `}</style>
 
@@ -368,7 +369,7 @@ export default function PhotographyWebsite() {
                     style={{ padding: '0.9rem 1.2rem', borderRadius: '12px', border: '1px solid #D4C5B9', fontSize: '1rem', fontFamily: 'inherit', backgroundColor: 'white', color: '#2C3E2F' }} />
                   <input type="email" required placeholder="Email address" value={waitlist.email} onChange={(e) => setWaitlist({ ...waitlist, email: e.target.value })}
                     style={{ padding: '0.9rem 1.2rem', borderRadius: '12px', border: '1px solid #D4C5B9', fontSize: '1rem', fontFamily: 'inherit', backgroundColor: 'white', color: '#2C3E2F' }} />
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                  <div className="waitlist-selects" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                     <select value={waitlist.city} onChange={(e) => setWaitlist({ ...waitlist, city: e.target.value })}
                       style={{ padding: '0.9rem 1.2rem', borderRadius: '12px', border: '1px solid #D4C5B9', fontSize: '1rem', fontFamily: 'inherit', backgroundColor: 'white', color: '#2C3E2F' }}>
                       <option>Langley</option>
