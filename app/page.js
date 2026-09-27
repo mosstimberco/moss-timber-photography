@@ -35,7 +35,6 @@ export default function PhotographyWebsite() {
   };
 
   const goBooking = () => {
-    trackLead();
     setCurrentPage('booking');
   };
 
