@@ -137,6 +137,7 @@ export default function PhotographyWebsite() {
             .site-nav { padding: 1rem 1.25rem !important; }
             .site-nav .nav-logo { font-size: 1.2rem !important; }
             .hero-nav { justify-content: flex-start !important; gap: 1rem !important; margin-bottom: 2rem !important; }
+            .hero-nav .hero-nav-secondary { display: none !important; }
             .hero-section { padding: 1rem 1.5rem 2.5rem !important; }
             .hero-grid { gap: 2rem !important; }
             .hero-image { order: -1 !important; }
@@ -159,8 +160,8 @@ export default function PhotographyWebsite() {
             <section className="hero-section" style={{ backgroundColor: '#2C3E2F', color: 'white', padding: '1.25rem 2rem 4rem' }}>
               <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
                 <div className="hero-nav" style={{ display: 'flex', justifyContent: 'flex-end', gap: '1.5rem', alignItems: 'center', marginBottom: '2.5rem', flexWrap: 'wrap' }}>
-                  <button onClick={() => { setCurrentPage('home'); setTimeout(() => document.getElementById('packages')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#F5F1E8', fontSize: '0.95rem', fontFamily: 'inherit' }}>Sessions</button>
-                  <button onClick={() => { setCurrentPage('home'); setTimeout(() => document.getElementById('food')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#F5F1E8', fontSize: '0.95rem', fontFamily: 'inherit' }}>For Business</button>
+                  <button className="hero-nav-secondary" onClick={() => { setCurrentPage('home'); setTimeout(() => document.getElementById('packages')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#F5F1E8', fontSize: '0.95rem', fontFamily: 'inherit' }}>Sessions</button>
+                  <button className="hero-nav-secondary" onClick={() => { setCurrentPage('home'); setTimeout(() => document.getElementById('food')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#F5F1E8', fontSize: '0.95rem', fontFamily: 'inherit' }}>For Business</button>
                   <button onClick={goBooking} style={{ backgroundColor: '#A88E7F', color: 'white', border: 'none', padding: '0.7rem 1.4rem', fontSize: '0.95rem', cursor: 'pointer', borderRadius: '50px', fontFamily: 'inherit' }}>Reserve free</button>
                 </div>
               <div className="hero-grid" style={{ maxWidth: '1100px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', alignItems: 'center' }}>
