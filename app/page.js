@@ -140,7 +140,8 @@ export default function PhotographyWebsite() {
             .hero-section { padding: 1rem 1.5rem 2.5rem !important; }
             .hero-grid { gap: 2rem !important; }
             .hero-image { order: -1 !important; }
-            .hero-image img { aspect-ratio: 4/5 !important; max-height: 480px !important; object-position: center top !important; }
+            .hero-image img { aspect-ratio: 4/3 !important; max-height: 320px !important; object-position: center top !important; }
+            .hero-kicker { display: none !important; }
             .hero-title { font-size: 2rem !important; }
             .hero-subline, .hero-desc, .hero-cta-secondary, .hero-trust { display: none !important; }
             .waitlist-selects { grid-template-columns: 1fr !important; }
@@ -174,7 +175,7 @@ export default function PhotographyWebsite() {
                     <button className="hero-cta-secondary" onClick={() => document.getElementById('packages')?.scrollIntoView({ behavior: 'smooth' })} style={{ backgroundColor: 'transparent', color: 'white', border: '1px solid white', padding: '1rem 2.5rem', fontSize: '1.05rem', cursor: 'pointer', borderRadius: '50px', fontFamily: 'inherit', minWidth: '15rem', boxSizing: 'border-box', textAlign: 'center' }}>See collections</button>
                   </div>
                   <p className="hero-trust" style={{ marginTop: '1.25rem', fontSize: '0.9rem', opacity: 0.85 }}>No card · No deposit · Walk away free if you don’t love them</p>
-                  <div style={{ marginTop: '2.5rem', paddingTop: '1.25rem', borderTop: '1px solid rgba(255,255,255,0.25)', fontSize: '0.7rem', letterSpacing: '3px', opacity: 0.7 }}>
+                  <div className="hero-kicker" style={{ marginTop: '2.5rem', paddingTop: '1.25rem', borderTop: '1px solid rgba(255,255,255,0.25)', fontSize: '0.7rem', letterSpacing: '3px', opacity: 0.7 }}>
                     FALL &amp; HOLIDAY MINIS — NOW BOOKING
                   </div>
                 </div>
