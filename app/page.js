@@ -137,7 +137,7 @@ export default function PhotographyWebsite() {
             .site-nav { padding: 1rem 1.25rem !important; }
             .site-nav .nav-logo { font-size: 1.2rem !important; }
             .hero-nav { justify-content: flex-start !important; gap: 1rem !important; margin-bottom: 2rem !important; }
-            .hero-section { padding: 2.5rem 1.5rem !important; }
+            .hero-section { padding: 1rem 1.5rem 2.5rem !important; }
             .hero-grid { gap: 2rem !important; }
             .hero-image { order: -1 !important; }
             .hero-image img { aspect-ratio: 4/3 !important; max-height: 300px !important; }
@@ -156,7 +156,7 @@ export default function PhotographyWebsite() {
         {currentPage === 'home' && (
           <>
             {/* Hero */}
-            <section className="hero-section" style={{ backgroundColor: '#2C3E2F', color: 'white', padding: '4rem 2rem' }}>
+            <section className="hero-section" style={{ backgroundColor: '#2C3E2F', color: 'white', padding: '1.25rem 2rem 4rem' }}>
               <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
                 <div className="hero-nav" style={{ display: 'flex', justifyContent: 'flex-end', gap: '1.5rem', alignItems: 'center', marginBottom: '2.5rem', flexWrap: 'wrap' }}>
                   <button onClick={() => { setCurrentPage('home'); setTimeout(() => document.getElementById('packages')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#F5F1E8', fontSize: '0.95rem', fontFamily: 'inherit' }}>Sessions</button>
