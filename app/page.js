@@ -269,16 +269,16 @@ export default function PhotographyWebsite() {
             {/* Gallery */}
             <section style={{ padding: '4rem 2rem', backgroundColor: '#F9F7F4' }}>
               <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-                <p style={{ fontSize: '0.85rem', letterSpacing: '2px', color: '#A88E7F', marginBottom: '1rem' }}>RECENT WORK</p>
-                <h2 style={{ fontSize: '2.5rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>Recent sessions.</h2>
-                <p style={{ color: '#666', marginBottom: '3rem', fontSize: '1.05rem' }}>A few favourites from recent sessions around Langley &amp; Surrey.</p>
+                <p style={{ fontSize: '0.85rem', letterSpacing: '2px', color: '#A88E7F', marginBottom: '1rem' }}>PORTFOLIO</p>
+                <h2 style={{ fontSize: '2.5rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>The look.</h2>
+                <p style={{ color: '#666', marginBottom: '3rem', fontSize: '1.05rem' }}>Warm light, natural moments, nothing stiff — a feel for the style.</p>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem' }}>
                   {[...Array(12)].map((_, idx) => (
                     <img
                       key={idx}
                       src={`/photos/photo${idx + 1}.jpg`}
-                      alt={`Family photo session in the park — Moss & Timber Photography, Langley & Surrey BC`}
+                      alt={`Outdoor family photography style sample — Moss & Timber Photography`}
                       style={{
                         borderRadius: '12px',
                         width: '100%',
