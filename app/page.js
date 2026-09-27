@@ -136,8 +136,7 @@ export default function PhotographyWebsite() {
           @media (max-width: 640px) {
             .site-nav { padding: 1rem 1.25rem !important; }
             .site-nav .nav-logo { font-size: 1.2rem !important; }
-            .hero-nav { justify-content: flex-start !important; gap: 1rem !important; margin-bottom: 2rem !important; }
-            .hero-nav .hero-nav-secondary { display: none !important; }
+            .hero-nav { display: none !important; }
             .hero-section { padding: 1rem 1.5rem 2.5rem !important; }
             .hero-grid { gap: 2rem !important; }
             .hero-image { order: -1 !important; }
