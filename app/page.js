@@ -166,9 +166,6 @@ export default function PhotographyWebsite() {
                 </div>
               <div className="hero-grid" style={{ maxWidth: '1100px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', alignItems: 'center' }}>
                 <div>
-                  <div style={{ marginBottom: '1.25rem', fontSize: '0.75rem', letterSpacing: '3px', opacity: 0.7 }}>
-                    FALL &amp; HOLIDAY MINIS — NOW BOOKING
-                  </div>
                   <p className="hero-subline" style={{ fontSize: '1.15rem', fontStyle: 'italic', marginBottom: '0.75rem', opacity: 0.85 }}>Where family stories are rooted in nature.</p>
                   <h1 className="hero-title" style={{ fontSize: '3rem', marginBottom: '1rem', fontWeight: 'normal', lineHeight: 1.2 }}>Family photographer in Langley &amp; Surrey, BC</h1>
                   <p className="hero-desc" style={{ fontSize: '1.1rem', marginBottom: '2rem', opacity: 0.9, lineHeight: 1.6 }}>Thirty unhurried minutes under the maples of Langley &amp; Surrey. You pay nothing to reserve — and nothing at all unless you love the photos.</p>
@@ -177,6 +174,9 @@ export default function PhotographyWebsite() {
                     <button className="hero-cta-secondary" onClick={() => document.getElementById('packages')?.scrollIntoView({ behavior: 'smooth' })} style={{ backgroundColor: 'transparent', color: 'white', border: '1px solid white', padding: '1rem 2.5rem', fontSize: '1.05rem', cursor: 'pointer', borderRadius: '50px', fontFamily: 'inherit', minWidth: '15rem', boxSizing: 'border-box', textAlign: 'center' }}>See collections</button>
                   </div>
                   <p className="hero-trust" style={{ marginTop: '1.25rem', fontSize: '0.9rem', opacity: 0.85 }}>No card · No deposit · Walk away free if you don’t love them</p>
+                  <div style={{ marginTop: '2rem', fontSize: '0.75rem', letterSpacing: '3px', opacity: 0.7 }}>
+                    FALL &amp; HOLIDAY MINIS — NOW BOOKING
+                  </div>
                 </div>
                 <div className="hero-image">
                   <img src="/photos/hero-family.jpg" alt="Fall family session — couple with their young child, Moss & Timber Photography" style={{ borderRadius: '16px', width: '100%', aspectRatio: '4/5', objectFit: 'cover' }} />
