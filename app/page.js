@@ -75,8 +75,7 @@ export default function PhotographyWebsite() {
     { q: 'How does payment actually work?', a: 'There isn’t one — not upfront, anyway. You reserve for free, we shoot, you preview the gallery, and only then do you choose a collection. Love them, pay. Don’t, walk away. That’s the whole deal.' },
     { q: 'Where do the sessions happen?', a: 'Out in the open, under real trees. In Surrey we love Bear Creek Park and Hawthorn Park; in Langley it’s Campbell Valley and Derby Reach. We’ll name your exact meeting spot when you book — no mystery, no surprises.' },
     { q: 'Can we bring the dog? Grandma? The whole crew?', a: 'Please do. Kids can be kids, dogs can be dogs, grandparents get the good bench. Mini sessions comfortably fit up to 6\u20138 people — just mention the headcount when you book.' },
-    { q: 'Can we reschedule if something comes up?', a: 'Of course — life with kids is unpredictable. Move to any open slot at no charge, as long as you let us know at least 24 hours ahead.' },
-    { q: 'Do you shoot anything besides families?', a: 'Yes — Moss & Timber also photographs food, menus, and products for Langley & Surrey businesses. Flat-rate sets, 48-hour turnaround. Scroll to the business section below or mention it when you book.' }
+    { q: 'Can we reschedule if something comes up?', a: 'Of course — life with kids is unpredictable. Move to any open slot at no charge, as long as you let us know at least 24 hours ahead.' }
   ];
 
   const processSteps = [
@@ -104,7 +103,7 @@ export default function PhotographyWebsite() {
           "@context": "https://schema.org",
           "@type": "ProfessionalService",
           "name": "Moss & Timber Photography",
-          "description": "Family mini photo sessions and food & e-commerce photography in Langley & Surrey, BC. Free to reserve — pay only for photos you love.",
+          "description": "Family mini photo sessions in Langley & Surrey, BC. Free to reserve — pay only for photos you love.",
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "Langley",
@@ -176,7 +175,6 @@ export default function PhotographyWebsite() {
               <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
                 <div className="hero-nav" style={{ display: 'flex', justifyContent: 'flex-end', gap: '1.5rem', alignItems: 'center', marginBottom: 'var(--s12)', flexWrap: 'wrap' }}>
                   <button className="hero-nav-secondary" onClick={() => { setCurrentPage('home'); setTimeout(() => document.getElementById('packages')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#F5F1E8', fontSize: '0.95rem', fontFamily: 'inherit' }}>Sessions</button>
-                  <button className="hero-nav-secondary" onClick={() => { setCurrentPage('home'); setTimeout(() => document.getElementById('food')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#F5F1E8', fontSize: '0.95rem', fontFamily: 'inherit' }}>For Business</button>
                   <button onClick={goBooking} style={{ backgroundColor: '#A88E7F', color: 'white', border: 'none', padding: '0.7rem 1.4rem', fontSize: '0.95rem', cursor: 'pointer', borderRadius: '50px', fontFamily: 'inherit' }}>Reserve free</button>
                 </div>
               <div className="hero-grid" style={{ maxWidth: '1100px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', alignItems: 'center' }}>
@@ -305,30 +303,6 @@ export default function PhotographyWebsite() {
                       }}
                     />
                   ))}
-                </div>
-              </div>
-            </section>
-
-            {/* Food & Business */}
-            <section id="food" className="section" style={{ backgroundColor: '#2C3E2F', color: 'white' }}>
-              <div style={{ maxWidth: '1000px', margin: '0 auto', display: 'grid', gap: '2rem', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', alignItems: 'center' }}>
-                <div>
-                  <p style={{ fontSize: '0.85rem', letterSpacing: '2px', color: '#A88E7F', marginBottom: '1rem' }}>FOR LOCAL BUSINESS</p>
-                  <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem', fontWeight: 'normal' }}>Food &amp; products that look as good as they taste.</h2>
-                  <p style={{ color: '#D4C5B9', fontSize: '1.05rem', lineHeight: 1.7, marginBottom: '2rem' }}>
-                    Moss &amp; Timber also shoots for Langley &amp; Surrey businesses — menu refreshes, delivery-app photos that actually sell the dish, and clean e-commerce product shots. Flat-rate sets, 48-hour turnaround, shot on location at your place.
-                  </p>
-                  <button onClick={goBooking} style={{ backgroundColor: '#A88E7F', color: 'white', border: 'none', padding: '1rem 2.5rem', fontSize: '1.05rem', cursor: 'pointer', borderRadius: '50px', fontFamily: 'inherit' }}>Ask about a business shoot</button>
-                </div>
-                <div style={{ display: 'grid', gap: '1rem' }}>
-                  <div style={{ backgroundColor: 'rgba(255,255,255,0.08)', padding: '1.5rem', borderRadius: '12px' }}>
-                    <h3 style={{ fontSize: '1.2rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>The Menu Refresh</h3>
-                    <p style={{ color: '#D4C5B9', fontSize: '0.95rem', lineHeight: 1.6 }}>10 signature dishes, styled and shot at your restaurant. Made for menus, Instagram, and delivery apps.</p>
-                  </div>
-                  <div style={{ backgroundColor: 'rgba(255,255,255,0.08)', padding: '1.5rem', borderRadius: '12px' }}>
-                    <h3 style={{ fontSize: '1.2rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>The Product Set</h3>
-                    <p style={{ color: '#D4C5B9', fontSize: '0.95rem', lineHeight: 1.6 }}>Clean, consistent product photography for your online shop — no more phone snaps on the counter.</p>
-                  </div>
                 </div>
               </div>
             </section>
