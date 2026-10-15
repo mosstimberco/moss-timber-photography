@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 export default function PhotographyWebsite() {
   const [currentPage, setCurrentPage] = useState('home');
   const [expandedFaq, setExpandedFaq] = useState(null);
-  const [waitlist, setWaitlist] = useState({ name: '', email: '', city: 'Langley', how: 'Facebook' });
+  const [waitlist, setWaitlist] = useState({ name: '', email: '', city: '', how: '' });
   const [waitlistStatus, setWaitlistStatus] = useState(null);
 
   const submitWaitlist = async (e) => {
@@ -360,20 +360,28 @@ export default function PhotographyWebsite() {
                   <input type="email" required placeholder="Email address" value={waitlist.email} onChange={(e) => setWaitlist({ ...waitlist, email: e.target.value })}
                     style={{ padding: 'var(--s4) var(--s5)', borderRadius: '12px', border: '1px solid #D4C5B9', fontSize: '1rem', fontFamily: 'inherit', backgroundColor: 'white', color: '#2C3E2F' }} />
                   <div className="waitlist-selects" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-                    <select value={waitlist.city} onChange={(e) => setWaitlist({ ...waitlist, city: e.target.value })}
-                      style={{ padding: 'var(--s4) var(--s5)', borderRadius: '12px', border: '1px solid #D4C5B9', fontSize: '1rem', fontFamily: 'inherit', backgroundColor: 'white', color: '#2C3E2F' }}>
-                      <option>Langley</option>
-                      <option>Surrey</option>
-                      <option>Elsewhere in the Lower Mainland</option>
-                    </select>
-                    <select value={waitlist.how} onChange={(e) => setWaitlist({ ...waitlist, how: e.target.value })}
-                      style={{ padding: 'var(--s4) var(--s5)', borderRadius: '12px', border: '1px solid #D4C5B9', fontSize: '1rem', fontFamily: 'inherit', backgroundColor: 'white', color: '#2C3E2F' }}>
-                      <option>Facebook</option>
-                      <option>Instagram</option>
-                      <option>Google</option>
-                      <option>Friend or family</option>
-                      <option>Other</option>
-                    </select>
+                    <label style={{ display: 'grid', gap: '0.4rem', fontSize: '0.9rem', color: '#666' }}>
+                      Your city
+                      <select required value={waitlist.city} onChange={(e) => setWaitlist({ ...waitlist, city: e.target.value })}
+                        style={{ padding: 'var(--s4) var(--s5)', borderRadius: '12px', border: '1px solid #D4C5B9', fontSize: '1rem', fontFamily: 'inherit', backgroundColor: 'white', color: '#2C3E2F' }}>
+                        <option value="" disabled>Select city</option>
+                        <option>Langley</option>
+                        <option>Surrey</option>
+                        <option>Elsewhere in the Lower Mainland</option>
+                      </select>
+                    </label>
+                    <label style={{ display: 'grid', gap: '0.4rem', fontSize: '0.9rem', color: '#666' }}>
+                      How did you hear about us?
+                      <select required value={waitlist.how} onChange={(e) => setWaitlist({ ...waitlist, how: e.target.value })}
+                        style={{ padding: 'var(--s4) var(--s5)', borderRadius: '12px', border: '1px solid #D4C5B9', fontSize: '1rem', fontFamily: 'inherit', backgroundColor: 'white', color: '#2C3E2F' }}>
+                        <option value="" disabled>Select one</option>
+                        <option>Facebook</option>
+                        <option>Instagram</option>
+                        <option>Google</option>
+                        <option>Friend or family</option>
+                        <option>Other</option>
+                      </select>
+                    </label>
                   </div>
                   <button type="submit" disabled={waitlistStatus === 'sending'}
                     style={{ backgroundColor: '#A88E7F', color: 'white', border: 'none', padding: '1rem 2.5rem', fontSize: '1.05rem', cursor: 'pointer', borderRadius: '50px', fontFamily: 'inherit', opacity: waitlistStatus === 'sending' ? 0.7 : 1 }}>
