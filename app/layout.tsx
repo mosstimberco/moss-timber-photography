@@ -21,12 +21,12 @@ const cormorant = Cormorant_Garamond({
 
 export const metadata: Metadata = {
   title: "Family Photographer in Langley & Surrey, BC | Moss & Timber Photography",
-  description: "Langley & Surrey family photographer. 30-minute outdoor mini sessions — free to reserve, pay only for the photos you love. Fall & holiday dates now booking.",
+  description: "Langley & Surrey family photographer. 20-minute outdoor mini sessions — free to reserve, pay only for the photos you love. Fall & holiday dates now booking.",
   keywords: "family photographer Langley BC, family photographer Surrey BC, fall mini sessions Langley, Christmas mini sessions Surrey, outdoor family portraits Fraser Valley",
   alternates: { canonical: "https://mosstimberco.com" },
   openGraph: {
     title: "Moss & Timber Photography | Family Photographer Langley & Surrey",
-    description: "30-minute outdoor family sessions. Free to reserve — pay only for the photos you love.",
+    description: "20-minute outdoor family sessions. Free to reserve — pay only for the photos you love.",
     url: "https://mosstimberco.com",
     type: "website",
     images: [{ url: "https://mosstimberco.com/photos/hero-family.jpg", alt: "Fall family photo session in Langley BC" }],

@@ -181,7 +181,7 @@ export default function PhotographyWebsite() {
                 <div>
                   <p className="hero-subline" style={{ fontSize: '1.15rem', fontStyle: 'italic', marginBottom: '0.75rem', opacity: 0.85 }}>Where family stories are rooted in nature.</p>
                   <h1 className="hero-title" style={{ fontSize: '3rem', marginBottom: 'var(--s8)', fontWeight: 'normal', lineHeight: 1.2 }}>Family photography in Langley &amp; Surrey, BC</h1>
-                  <p className="hero-desc" style={{ fontSize: '1.1rem', marginBottom: '2rem', opacity: 0.9, lineHeight: 1.6 }}>Thirty unhurried minutes under the maples of Langley &amp; Surrey. You pay nothing to reserve — and nothing at all unless you love the photos.</p>
+                  <p className="hero-desc" style={{ fontSize: '1.1rem', marginBottom: '2rem', opacity: 0.9, lineHeight: 1.6 }}>Twenty unhurried minutes under the maples of Langley &amp; Surrey. You pay nothing to reserve — and nothing at all unless you love the photos.</p>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
                     <button onClick={goBooking} style={{ backgroundColor: '#A88E7F', color: 'white', border: 'none', padding: '1rem 2.5rem', fontSize: '1.05rem', cursor: 'pointer', borderRadius: '50px', fontFamily: 'inherit', minWidth: '15rem', boxSizing: 'border-box', textAlign: 'center' }}>Reserve my session</button>
                     <button className="hero-cta-secondary" onClick={() => document.getElementById('packages')?.scrollIntoView({ behavior: 'smooth' })} style={{ backgroundColor: 'transparent', color: 'white', border: '1px solid white', padding: '1rem 2.5rem', fontSize: '1.05rem', cursor: 'pointer', borderRadius: '50px', fontFamily: 'inherit', minWidth: '15rem', boxSizing: 'border-box', textAlign: 'center' }}>See collections</button>
@@ -201,12 +201,12 @@ export default function PhotographyWebsite() {
             {/* Details */}
             <section className="section" style={{ maxWidth: '1000px', margin: '0 auto' }}>
               <p style={{ fontSize: '0.85rem', letterSpacing: '2px', color: '#A88E7F', marginBottom: '1rem' }}>GOOD TO KNOW</p>
-              <h2 style={{ fontSize: '2.5rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>Thirty minutes, zero risk, photos you’ll actually frame.</h2>
+              <h2 style={{ fontSize: '2.5rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>Twenty minutes, zero risk, photos you’ll actually frame.</h2>
               <p style={{ color: '#666', marginBottom: '3rem', fontSize: '1.05rem' }}>For families who want beautiful photos without the fuss.</p>
 
               <div style={{ display: 'grid', gap: '1.5rem', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))' }}>
                 <div style={{ backgroundColor: '#F9F7F4', padding: '2rem', borderRadius: '12px' }}>
-                  <h3 style={{ fontSize: '1.3rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>30 minutes</h3>
+                  <h3 style={{ fontSize: '1.3rem', marginBottom: '0.5rem', fontWeight: 'normal' }}>20 minutes</h3>
                   <p style={{ color: '#666', fontSize: '0.95rem', lineHeight: '1.6' }}>Short enough for wiggly toddlers, long enough for the real stuff — the laughs, the leaning-in, the in-between.</p>
                 </div>
                 <div style={{ backgroundColor: '#F9F7F4', padding: '2rem', borderRadius: '12px' }}>
